@@ -1,1 +1,233 @@
-body{background:white;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:#0f172a;
+padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+}
+
+.hero{
+position:relative;
+height:90vh;
+overflow:hidden;
+}
+
+.slider{
+width:100%;
+height:100%;
+position:absolute;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+z-index:10;
+background:rgba(0,0,0,.5);
+padding:30px;
+border-radius:15px;
+width:90%;
+max-width:800px;
+}
+
+.hero-content h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin:5px;
+}
+
+.call{
+background:#1e88e5;
+color:white;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+section{
+padding:70px 5%;
+}
+
+section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:36px;
+color:#0f172a;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card button{
+margin-top:15px;
+background:#1e88e5;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+}
+
+form{
+max-width:700px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+form input,
+form select,
+form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+form button{
+width:100%;
+padding:15px;
+background:#25D366;
+border:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+}
+
+.instagram{
+background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+text-align:center;
+color:white;
+}
+
+.instagram a{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:white;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.hero-content h1{
+font-size:32px;
+}
+
+section h2{
+font-size:28px;
+}
+
+}
