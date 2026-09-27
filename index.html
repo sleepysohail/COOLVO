@@ -3,14 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coolvo.in | AC, Fridge & Washing Machine Service</title>
 
-<title>Coolvo.in | AC, Fridge & Washing Machine Service in Pilibhit</title>
-
-<meta name="description" content="Coolvo provides AC Repair, AC Installation, Refrigerator Repair, Washing Machine Repair, Spare Parts and Home Appliance Services in Pilibhit, Puranpur, Bisalpur, Amariya and nearby areas.">
-
-<meta name="keywords" content="AC Repair Pilibhit, AC Service Pilibhit, Refrigerator Repair Pilibhit, Washing Machine Repair Pilibhit, AC Installation Pilibhit, Coolvo">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description" content="AC Repair, AC Installation, Refrigerator Repair, Washing Machine Repair, Copper Piping, Spare Parts and Home Appliance Services in Pilibhit, Puranpur, Bisalpur, Amariya and nearby areas.">
 
 <style>
 
@@ -18,187 +13,145 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
 background:#f5f7fb;
 color:#222;
+line-height:1.6;
 }
 
 header{
-background:#071326;
-padding:15px 8%;
+background:linear-gradient(135deg,#0f172a,#2563eb);
+color:white;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:999;
 }
 
 .logo{
 font-size:32px;
-font-weight:700;
-color:#fff;
-}
-
-.logo span{
-color:#1ea7ff;
+font-weight:bold;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
-font-weight:500;
 }
 
 .hero{
-height:90vh;
-background:url('images/hero-banner.png') center/cover no-repeat;
-position:relative;
+background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+min-height:80vh;
 display:flex;
 align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
 }
 
 .hero::before{
-content:'';
+content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.55);
+background:rgba(0,0,0,0.65);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-padding:0 8%;
-max-width:750px;
 color:white;
+padding:20px;
+max-width:800px;
 }
 
 .hero h1{
-font-size:55px;
-line-height:1.1;
+font-size:48px;
 margin-bottom:15px;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 26px;
-border-radius:8px;
+background:#2563eb;
+color:white;
+padding:12px 24px;
 text-decoration:none;
-margin-right:10px;
-font-weight:700;
-}
-
-.call{
-background:#1ea7ff;
-color:white;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
+border-radius:8px;
+margin:5px;
+font-weight:bold;
 }
 
 .section{
-padding:80px 8%;
+padding:70px 8%;
 }
 
 .section-title{
 text-align:center;
-font-size:40px;
-margin-bottom:50px;
-color:#071326;
+font-size:36px;
+margin-bottom:40px;
+color:#0f172a;
 }
 
-.grid{
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
 }
 
 .card h3{
 margin-bottom:10px;
-color:#071326;
+}
+
+.area-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
 }
 
 .area{
-background:#1ea7ff;
+background:#2563eb;
 color:white;
-padding:20px;
-text-align:center;
+padding:15px;
 border-radius:10px;
-font-weight:bold;
-}
-
-.review{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.instagram{
-background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
-color:white;
 text-align:center;
-padding:70px 20px;
-}
-
-.instagram h2{
-font-size:42px;
-margin-bottom:15px;
-}
-
-.instagram a{
-display:inline-block;
-background:white;
-color:black;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
 font-weight:bold;
-margin-top:15px;
 }
 
 .contact{
-background:#071326;
+background:#0f172a;
 color:white;
 text-align:center;
 }
 
-.contact p{
-margin:10px 0;
-font-size:18px;
+.contact h2{
+color:white;
 }
 
 footer{
-background:#020812;
+background:#020617;
 color:white;
 text-align:center;
-padding:25px;
+padding:20px;
 }
 
-.float-whatsapp{
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -208,38 +161,38 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
+z-index:999;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:38px;
+font-size:34px;
+}
+
+header{
+flex-direction:column;
 }
 
 nav{
-display:none;
-}
-
-.section-title{
-font-size:30px;
+margin-top:10px;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
 <header>
 
-<div class="logo">COOL<span>VO</span>.IN</div>
+<div class="logo">COOLVO.IN</div>
 
 <nav>
 <a href="#services">Services</a>
 <a href="#parts">Spare Parts</a>
 <a href="#areas">Areas</a>
-<a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -249,15 +202,17 @@ font-size:30px;
 
 <div class="hero-content">
 
-<h1>Trusted Home Appliance Services In Pilibhit</h1>
+<h1>Trusted Home Appliance Services in Pilibhit</h1>
 
 <p>
-AC Repair • AC Installation • Refrigerator Repair • Washing Machine Repair • Genuine Spare Parts
+AC Repair, AC Installation, Refrigerator Repair,
+Washing Machine Repair, Copper Piping &
+Genuine Spare Parts.
 </p>
 
-<a href="tel:6399843648" class="btn call">Call Now</a>
+<a class="btn" href="tel:6399843648">Call Now</a>
 
-<a href="https://wa.me/916399843648" class="btn whatsapp">WhatsApp</a>
+<a class="btn" href="https://wa.me/916399843648">WhatsApp</a>
 
 </div>
 
@@ -267,11 +222,11 @@ AC Repair • AC Installation • Refrigerator Repair • Washing Machine Repair
 
 <h2 class="section-title">Our Services</h2>
 
-<div class="grid">
+<div class="cards">
 
 <div class="card">
 <h3>AC Repair & Service</h3>
-<p>Complete AC repair, maintenance and servicing.</p>
+<p>Fast and reliable AC repair solutions.</p>
 </div>
 
 <div class="card">
@@ -280,23 +235,23 @@ AC Repair • AC Installation • Refrigerator Repair • Washing Machine Repair
 </div>
 
 <div class="card">
-<h3>AC Gas Charging</h3>
-<p>Fast gas refilling and leak checking.</p>
-</div>
-
-<div class="card">
 <h3>Refrigerator Repair</h3>
-<p>Cooling and compressor solutions.</p>
+<p>Cooling and compressor related solutions.</p>
 </div>
 
 <div class="card">
 <h3>Washing Machine Repair</h3>
-<p>Automatic and semi automatic repairs.</p>
+<p>Automatic and semi automatic repair.</p>
 </div>
 
 <div class="card">
-<h3>Copper Piping</h3>
-<p>Copper line installation and maintenance.</p>
+<h3>Copper Piping Work</h3>
+<p>Underground copper line installation.</p>
+</div>
+
+<div class="card">
+<h3>Annual Maintenance</h3>
+<p>Keep appliances running efficiently.</p>
 </div>
 
 </div>
@@ -307,16 +262,16 @@ AC Repair • AC Installation • Refrigerator Repair • Washing Machine Repair
 
 <h2 class="section-title">Spare Parts & Accessories</h2>
 
-<div class="grid">
+<div class="cards">
 
-<div class="card"><h3>AC Filters</h3></div>
-<div class="card"><h3>AC Perfume</h3></div>
-<div class="card"><h3>AC Stickers</h3></div>
-<div class="card"><h3>Washing Machine Pipe</h3></div>
-<div class="card"><h3>Spin Cap</h3></div>
-<div class="card"><h3>Door Filters</h3></div>
-<div class="card"><h3>Fridge Tray</h3></div>
-<div class="card"><h3>Bottle Tray</h3></div>
+<div class="card">AC Filters</div>
+<div class="card">AC Perfume</div>
+<div class="card">AC Stickers</div>
+<div class="card">Washing Machine Pipe</div>
+<div class="card">Spin Cap</div>
+<div class="card">Door Filters</div>
+<div class="card">Fridge Tray</div>
+<div class="card">Bottle Tray</div>
 
 </div>
 
@@ -326,7 +281,7 @@ AC Repair • AC Installation • Refrigerator Repair • Washing Machine Repair
 
 <h2 class="section-title">Service Areas</h2>
 
-<div class="grid">
+<div class="area-list">
 
 <div class="area">Pilibhit</div>
 <div class="area">Puranpur</div>
@@ -339,65 +294,56 @@ AC Repair • AC Installation • Refrigerator Repair • Washing Machine Repair
 
 </section>
 
-<section id="reviews" class="section">
+<section class="section">
 
-<h2 class="section-title">Customer Reviews</h2>
+<h2 class="section-title">Why Choose Coolvo?</h2>
 
-<div class="grid">
+<div class="cards">
 
-<div class="review">
-★★★★★ <br><br>
-Excellent AC service and fast response.
+<div class="card">
+<h3>Experienced Technician</h3>
 </div>
 
-<div class="review">
-★★★★★ <br><br>
-Professional technician and affordable pricing.
+<div class="card">
+<h3>Same Day Service</h3>
 </div>
 
-<div class="review">
-★★★★★ <br><br>
-Recommended for AC and refrigerator repairs.
+<div class="card">
+<h3>Affordable Pricing</h3>
+</div>
+
+<div class="card">
+<h3>Genuine Spare Parts</h3>
 </div>
 
 </div>
-
-</section>
-
-<section class="instagram">
-
-<h2>Follow Us On Instagram</h2>
-
-<p>@coolvo.in</p>
-
-<a href="https://instagram.com/coolvo.in">
-Follow Now
-</a>
 
 </section>
 
 <section id="contact" class="section contact">
 
-<h2 class="section-title" style="color:white;">Contact Us</h2>
+<h2>Contact Us</h2>
 
-<p>📞 6399843648</p>
-<p>💬 WhatsApp Support Available</p>
-<p>📧 alisohilali@gmail.com</p>
+<br>
 
-<p>
-Serving Pilibhit, Puranpur, Bisalpur, Amariya,
-Majhola and Nearby Areas
-</p>
+<p><strong>Phone:</strong> 6399843648</p>
+
+<p><strong>WhatsApp:</strong> 6399843648</p>
+
+<p><strong>Email:</strong> alisohilali@gmail.com</p>
+
+<p><strong>Instagram:</strong> @coolvo.in</p>
 
 </section>
 
 <footer>
 
-© 2026 Coolvo.in | Home Appliance Services & Solutions
+<p>© 2026 Coolvo.in | All Rights Reserved</p>
 
 </footer>
 
-<a class="float-whatsapp" href="https://wa.me/916399843648">
+<a class="whatsapp"
+href="https://wa.me/916399843648">
 WhatsApp
 </a>
 
