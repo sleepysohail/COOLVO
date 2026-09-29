@@ -1,88 +1,135 @@
-/* ==========================================
-   COOLVO AC SERVICES
-========================================== */
+/* =====================================
+   COOLVO SERVICES PAGE JAVASCRIPT
+===================================== */
 
 
 /* MOBILE MENU */
 
-function toggleMenu(){
+function toggleServiceMenu(){
 
     const menu =
-        document.getElementById("mobileNav");
+        document.getElementById("serviceMobileMenu");
 
-    menu.classList.toggle("show");
-
-}
-
-
-/* ==========================================
-   BOOKING MODAL
-========================================== */
-
-function openBooking(service, price){
-
-    document
-    .getElementById("bookingModal")
-    .classList.add("show");
-
-
-    document
-    .getElementById("modalServiceName")
-    .textContent = service;
-
-
-    document
-    .getElementById("modalPrice")
-    .textContent = price;
-
-
-    window.currentCoolvoService = service;
-
-}
-
-
-function closeBooking(){
-
-    document
-    .getElementById("bookingModal")
-    .classList.remove("show");
-
-}
-
-
-/* CLOSE WHEN CLICKING OUTSIDE */
-
-document
-.getElementById("bookingModal")
-.addEventListener("click", function(event){
-
-    if(event.target === this){
-
-        closeBooking();
-
+    if(menu){
+        menu.classList.toggle("show");
     }
+
+}
+
+
+/* CLOSE MOBILE MENU */
+
+document.querySelectorAll(
+    ".service-mobile-menu a"
+).forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        const menu =
+            document.getElementById("serviceMobileMenu");
+
+        if(menu){
+            menu.classList.remove("show");
+        }
+
+    });
 
 });
 
 
-/* ESC KEY */
+/* CURRENT SERVICE */
 
-document.addEventListener("keydown", function(event){
+let currentService = "AC Service";
 
-    if(event.key === "Escape"){
+let currentPrice = "Get Quote";
 
-        closeBooking();
 
+/* OPEN BOOKING */
+
+function openServiceBooking(service, price){
+
+    currentService = service;
+
+    currentPrice = price;
+
+
+    const modal =
+        document.getElementById("bookingModal");
+
+    const serviceName =
+        document.getElementById("selectedService");
+
+    const priceText =
+        document.getElementById("selectedPrice");
+
+
+    if(modal){
+        modal.classList.add("show");
     }
 
-});
+    if(serviceName){
+        serviceName.textContent = service;
+    }
+
+    if(priceText){
+        priceText.textContent = price;
+    }
+
+}
 
 
-/* ==========================================
-   SERVICE DETAILS
-========================================== */
+/* CLOSE BOOKING */
 
-function showDetails(title, description){
+function closeServiceBooking(){
+
+    const modal =
+        document.getElementById("bookingModal");
+
+    if(modal){
+        modal.classList.remove("show");
+    }
+
+}
+
+
+/* CLOSE WHEN CLICKING BACKDROP */
+
+const bookingModal =
+    document.getElementById("bookingModal");
+
+if(bookingModal){
+
+    bookingModal.addEventListener(
+        "click",
+        function(event){
+
+            if(event.target === bookingModal){
+                closeServiceBooking();
+            }
+
+        }
+    );
+
+}
+
+
+/* ESCAPE KEY */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "Escape"){
+            closeServiceBooking();
+        }
+
+    }
+);
+
+
+/* DETAILS */
+
+function showServiceDetails(title, description){
 
     alert(
         title +
@@ -95,101 +142,104 @@ function showDetails(title, description){
 }
 
 
-/* ==========================================
-   BOOKING REQUEST → WHATSAPP
-========================================== */
+/* BOOKING FORM */
 
-document
-.getElementById("serviceBookingForm")
-.addEventListener("submit", function(event){
-
-    event.preventDefault();
+const serviceBookingForm =
+    document.getElementById(
+        "serviceBookingForm"
+    );
 
 
-    const name =
-        document
-        .getElementById("bookingName")
-        .value
-        .trim();
+if(serviceBookingForm){
+
+    serviceBookingForm.addEventListener(
+        "submit",
+        function(event){
+
+            event.preventDefault();
 
 
-    const phone =
-        document
-        .getElementById("bookingPhone")
-        .value
-        .trim();
+            const name =
+                document
+                .getElementById("customerName")
+                .value
+                .trim();
 
 
-    const location =
-        document
-        .getElementById("bookingLocation")
-        .value
-        .trim();
+            const phone =
+                document
+                .getElementById("customerPhone")
+                .value
+                .trim();
 
 
-    const acType =
-        document
-        .getElementById("bookingAcType")
-        .value;
+            const location =
+                document
+                .getElementById("customerLocation")
+                .value
+                .trim();
 
 
-    const time =
-        document
-        .getElementById("bookingTime")
-        .value;
+            const acType =
+                document
+                .getElementById("acType")
+                .value;
 
 
-    const problem =
-        document
-        .getElementById("bookingProblem")
-        .value
-        .trim();
+            const preferredTime =
+                document
+                .getElementById("preferredTime")
+                .value;
 
 
-    const service =
-        window.currentCoolvoService ||
-        "AC Service";
+            const problem =
+                document
+                .getElementById("customerProblem")
+                .value
+                .trim();
 
 
-    if(
-        !name ||
-        !phone ||
-        !location ||
-        !acType
-    ){
+            if(
+                !name ||
+                !phone ||
+                !location ||
+                !acType
+            ){
 
-        alert(
-            "Please fill all required details."
-        );
+                alert(
+                    "Please fill all required details."
+                );
 
-        return;
+                return;
 
-    }
+            }
 
 
-    const message =
-
+            const message =
 `*NEW COOLVO AC BOOKING REQUEST*
 
-🔧 Service:
-${service}
+Service:
+${currentService}
 
-👤 Customer:
+Price:
+${currentPrice}
+
+Customer:
 ${name}
 
-📱 Phone:
+Phone:
 ${phone}
 
-📍 Location:
+Location:
 ${location}
 
-❄️ AC Type:
+AC Type:
 ${acType}
 
-🕐 Preferred Time:
-${time || "Not specified"}
+Preferred Time:
+${preferredTime || "Not specified"}
 
-📝 Problem:
+Problem:
 ${problem || "Not specified"}
 
 ━━━━━━━━━━━━━━━━
@@ -202,23 +252,22 @@ Working Hours:
 Friday Off`;
 
 
-    const whatsappURL =
-        "https://wa.me/916399843648?text="
-        + encodeURIComponent(message);
+            const whatsappURL =
+                "https://wa.me/916399843648?text=" +
+                encodeURIComponent(message);
 
 
-    window.open(
-        whatsappURL,
-        "_blank"
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+
+            serviceBookingForm.reset();
+
+            closeServiceBooking();
+
+        }
     );
 
-
-    /*
-       Reset form after request
-    */
-
-    this.reset();
-
-    closeBooking();
-
-});
+}
