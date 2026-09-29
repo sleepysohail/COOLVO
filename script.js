@@ -1,85 +1,92 @@
-// HERO IMAGE SLIDER
+/* MOBILE MENU */
 
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+function toggleMenu(){
 
-function showSlide(index){
+    const nav = document.getElementById("mainNav");
 
-slides.forEach(slide=>{
-slide.classList.remove('active');
-});
-
-slides[index].classList.add('active');
-
-}
-
-setInterval(()=>{
-
-currentSlide++;
-
-if(currentSlide >= slides.length){
-currentSlide = 0;
-}
-
-showSlide(currentSlide);
-
-},4000);
-
-
-// SERVICE CARD BOOKING
-
-function openBooking(service){
-
-document.getElementById("service").value = service;
-
-document
-.getElementById("contact")
-.scrollIntoView({
-behavior:"smooth"
-});
+    nav.classList.toggle("show");
 
 }
 
 
-// WHATSAPP APPOINTMENT FORM
+/* SELECT SERVICE */
+
+function selectService(service){
+
+    const select = document.getElementById("selectedService");
+
+    select.value = service;
+
+    document.getElementById("booking").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* BOOKING FORM */
 
 document
 .getElementById("bookingForm")
-.addEventListener("submit",function(e){
+.addEventListener("submit", function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-let name =
-document.getElementById("name").value;
+    const name =
+        document.getElementById("customerName").value.trim();
 
-let phone =
-document.getElementById("phone").value;
+    const phone =
+        document.getElementById("customerPhone").value.trim();
 
-let city =
-document.getElementById("city").value;
+    const location =
+        document.getElementById("customerLocation").value.trim();
 
-let service =
-document.getElementById("service").value;
+    const service =
+        document.getElementById("selectedService").value;
 
-let problem =
-document.getElementById("problem").value;
+    const time =
+        document.getElementById("preferredTime").value;
 
-let message =
-`*NEW SERVICE REQUEST*
+    const problem =
+        document.getElementById("problem").value.trim();
 
-Name: ${name}
-Phone: ${phone}
-City: ${city}
-Service: ${service}
 
-Problem:
-${problem}
+    if(!name || !phone || !location || !service){
 
-Sent From Coolvo.in Website`;
+        alert("Please fill all required details.");
 
-let whatsappUrl =
-`https://wa.me/916399843648?text=${encodeURIComponent(message)}`;
+        return;
 
-window.open(whatsappUrl,'_blank');
+    }
+
+
+    const message =
+
+`*NEW COOLVO BOOKING REQUEST*
+
+👤 Name: ${name}
+
+📱 Phone: ${phone}
+
+📍 Location: ${location}
+
+🔧 Service: ${service}
+
+🕐 Preferred Time: ${time || "Not specified"}
+
+📝 Problem:
+${problem || "Not specified"}
+
+━━━━━━━━━━━━━━
+
+Sent from COOLVO.IN`;
+
+
+    const whatsappURL =
+        "https://wa.me/916399843648?text="
+        + encodeURIComponent(message);
+
+
+    window.open(whatsappURL, "_blank");
 
 });
