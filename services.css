@@ -23,101 +23,96 @@ a{
 
 /* HEADER */
 
-.site-header{
+.service-header{
     height:76px;
     padding:0 6%;
     display:flex;
     align-items:center;
     justify-content:space-between;
     background:#fff;
-    border-bottom:1px solid #e8e8e8;
+    border-bottom:1px solid #e5e5e5;
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:2000;
 }
 
-.brand{
+.service-logo{
     display:flex;
     flex-direction:column;
     line-height:1;
 }
 
-.brand-main{
+.service-logo span{
     font-size:26px;
     font-weight:900;
-    letter-spacing:-1px;
 }
 
-.brand small{
+.service-logo small{
     font-size:7px;
     letter-spacing:1.5px;
+    color:#777;
     margin-top:5px;
 }
 
-.desktop-nav{
+.service-header nav{
     display:flex;
-    gap:26px;
+    gap:25px;
 }
 
-.desktop-nav a{
+.service-header nav a{
     font-size:14px;
     font-weight:600;
 }
 
-.desktop-nav a:hover,
-.desktop-nav .active{
+.service-header nav a.active{
     text-decoration:underline;
 }
 
-.header-actions{
+.service-header-actions{
     display:flex;
     gap:8px;
 }
 
-.header-whatsapp,
-.header-call{
+.service-header-actions a{
     padding:9px 15px;
     border-radius:22px;
+    border:1px solid #111;
     font-size:13px;
     font-weight:bold;
 }
 
-.header-whatsapp{
+.service-header-actions a:last-child{
     background:#111;
     color:#fff;
 }
 
-.header-call{
-    border:1px solid #111;
-}
-
-.mobile-menu{
+.service-menu-button{
     display:none;
     border:0;
     background:none;
-    font-size:25px;
+    font-size:26px;
 }
 
 
-/* MOBILE NAV */
+/* MOBILE */
 
-.mobile-nav{
+.service-mobile-menu{
     display:none;
     position:fixed;
     top:76px;
     left:0;
     width:100%;
     background:#fff;
-    z-index:999;
+    z-index:1900;
     padding:20px;
     border-bottom:1px solid #ddd;
 }
 
-.mobile-nav.show{
+.service-mobile-menu.show{
     display:block;
 }
 
-.mobile-nav a{
+.service-mobile-menu a{
     display:block;
     padding:14px 0;
     border-bottom:1px solid #eee;
@@ -127,57 +122,42 @@ a{
 
 /* HERO */
 
-.services-hero{
-    min-height:470px;
-    background:
-    linear-gradient(
-        110deg,
-        #0b0b0b,
-        #292929 60%,
+.service-hero{
+    min-height:500px;
+    background:linear-gradient(
+        115deg,
+        #080808,
+        #292929 65%,
         #555
     );
     color:#fff;
     display:flex;
     align-items:center;
-    position:relative;
-    overflow:hidden;
 }
 
-.services-hero:after{
-    content:"AC";
-    position:absolute;
-    right:-80px;
-    top:30px;
-    font-size:320px;
-    font-weight:900;
-    color:rgba(255,255,255,.035);
-}
-
-.hero-inner{
-    width:90%;
+.service-hero-content{
+    width:88%;
     max-width:1100px;
     margin:auto;
-    position:relative;
-    z-index:2;
 }
 
-.eyebrow{
+.service-hero-content>span{
+    color:#aaa;
     font-size:12px;
     letter-spacing:2px;
     font-weight:bold;
-    color:#aaa;
 }
 
-.hero-inner h1{
-    font-size:58px;
+.service-hero h1{
+    font-size:60px;
     line-height:1.05;
     margin:18px 0;
 }
 
-.hero-inner p{
-    max-width:650px;
-    font-size:18px;
+.service-hero p{
+    max-width:680px;
     color:#ddd;
+    font-size:18px;
 }
 
 .hero-actions{
@@ -186,19 +166,19 @@ a{
     margin-top:30px;
 }
 
-.hero-primary,
-.hero-secondary{
+.hero-main-button,
+.hero-outline-button{
     padding:14px 24px;
     border-radius:28px;
     font-weight:bold;
 }
 
-.hero-primary{
+.hero-main-button{
     background:#fff;
     color:#111;
 }
 
-.hero-secondary{
+.hero-outline-button{
     border:1px solid #fff;
 }
 
@@ -206,90 +186,83 @@ a{
 /* CATEGORY */
 
 .category-bar{
-    background:#fff;
-    border-bottom:1px solid #eee;
-    position:sticky;
-    top:76px;
-    z-index:900;
-}
-
-.category-inner{
-    max-width:850px;
-    margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
+    max-width:850px;
+    margin:auto;
+    border-bottom:1px solid #eee;
 }
 
-.category{
-    padding:20px 10px;
+.category-bar a{
     text-align:center;
+    padding:20px;
     border-bottom:3px solid transparent;
 }
 
-.category span,
-.category strong{
+.category-bar a:hover{
+    border-bottom-color:#111;
+}
+
+.category-bar strong,
+.category-bar span{
     display:block;
 }
 
-.category span{
-    font-size:24px;
-    margin-bottom:5px;
+.category-bar strong{
+    font-size:23px;
 }
 
-.category strong{
-    font-size:14px;
-}
-
-.category:hover,
-.category.active{
-    border-bottom-color:#111;
+.category-bar span{
+    font-size:13px;
+    font-weight:bold;
+    margin-top:5px;
 }
 
 
 /* INTRO */
 
-.intro-section{
+.intro{
     max-width:1100px;
     margin:auto;
-    padding:70px 5%;
+    padding:75px 5%;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
     align-items:center;
 }
 
-.section-label,
-.section-title > span{
-    font-size:12px;
-    letter-spacing:2px;
+.intro span,
+.section-title>span{
     color:#777;
+    font-size:11px;
+    letter-spacing:2px;
     font-weight:bold;
 }
 
-.intro-section h2{
+.intro h2{
     font-size:40px;
     line-height:1.15;
     margin-top:10px;
 }
 
-.intro-section p{
+.intro p{
     color:#666;
 }
 
 
-/* SECTIONS */
+/* SERVICE SECTIONS */
 
-.service-section,
-.repair-section,
-.installation-section{
-    padding:75px 6%;
+.service-area-section,
+.repair-area,
+.installation-area{
+    padding:80px 6%;
 }
 
-.repair-section{
+.repair-area{
     background:#f7f7f7;
 }
 
-.installation-section{
+.installation-area{
     background:#fff;
 }
 
@@ -300,8 +273,8 @@ a{
 
 .section-title h2{
     font-size:38px;
+    line-height:1.15;
     margin:8px 0;
-    line-height:1.2;
 }
 
 .section-title p{
@@ -309,7 +282,7 @@ a{
 }
 
 
-/* SERVICE GRID */
+/* CARDS */
 
 .service-grid{
     max-width:1100px;
@@ -319,145 +292,72 @@ a{
     gap:20px;
 }
 
-
-/* CARD */
-
-.service-card{
+.ac-card{
     background:#fff;
-    border:1px solid #e4e4e4;
+    border:1px solid #e2e2e2;
     border-radius:14px;
     overflow:hidden;
     transition:.25s;
 }
 
-.service-card:hover{
+.ac-card:hover{
     transform:translateY(-3px);
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
-.service-image{
+.ac-image{
     height:210px;
+    background:linear-gradient(135deg,#111,#777);
+    color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    position:relative;
-    overflow:hidden;
-}
-
-.service-image:before{
-    content:"";
-    position:absolute;
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    border:35px solid rgba(255,255,255,.08);
-}
-
-.service-image span{
-    position:relative;
-    z-index:2;
-    color:#fff;
     font-size:32px;
     font-weight:900;
     letter-spacing:3px;
 }
 
-
-/* Black / white temporary visuals */
-
-.ac-clean{
-    background:linear-gradient(135deg,#111,#666);
-}
-
-.ac-deep{
-    background:linear-gradient(135deg,#222,#888);
-}
-
-.ac-jet{
-    background:linear-gradient(135deg,#111,#444);
-}
-
-.ac-maintenance{
-    background:linear-gradient(135deg,#333,#999);
-}
-
-.ac-repair{
-    background:linear-gradient(135deg,#111,#555);
-}
-
-.ac-gas{
-    background:linear-gradient(135deg,#222,#777);
-}
-
-.ac-pcb{
-    background:linear-gradient(135deg,#111,#888);
-}
-
-.ac-water{
-    background:linear-gradient(135deg,#333,#aaa);
-}
-
-.ac-install{
-    background:linear-gradient(135deg,#111,#666);
-}
-
-.ac-uninstall{
-    background:linear-gradient(135deg,#222,#888);
-}
-
-.copper{
-    background:linear-gradient(135deg,#111,#555);
-}
-
-
-/* CONTENT */
-
-.service-content{
+.ac-content{
     padding:25px;
 }
 
-.rating{
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:12px;
-}
-
-.rating span{
+.ac-content>small{
     color:#777;
-    margin-left:7px;
-    font-weight:normal;
+    font-size:10px;
+    letter-spacing:1.5px;
+    font-weight:bold;
 }
 
-.service-content h3{
+.ac-content h3{
     font-size:21px;
-    margin-bottom:8px;
+    margin:8px 0;
 }
 
-.service-content p{
+.ac-content p{
     color:#666;
     font-size:14px;
     min-height:50px;
 }
 
-.service-meta{
+.price-row{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:10px;
     margin:20px 0;
-    gap:15px;
 }
 
-.service-meta strong{
+.price-row strong{
     font-size:17px;
 }
 
-.service-meta span{
+.price-row span{
     color:#777;
-    font-size:12px;
+    font-size:11px;
     text-align:right;
 }
 
-.service-content button{
+.ac-content button{
     width:100%;
     padding:13px;
     border:0;
@@ -468,7 +368,7 @@ a{
     cursor:pointer;
 }
 
-.service-content .details-button{
+.ac-content button.details{
     margin-top:8px;
     background:#fff;
     color:#111;
@@ -478,18 +378,14 @@ a{
 
 /* PROMISE */
 
-.promise-section{
+.promise{
+    padding:80px 6%;
     background:#111;
     color:#fff;
-    padding:80px 6%;
 }
 
-.promise-section .section-title{
+.promise .section-title{
     text-align:center;
-}
-
-.promise-section .section-title h2{
-    margin-top:10px;
 }
 
 .promise-grid{
@@ -506,8 +402,8 @@ a{
     padding:25px;
 }
 
-.promise-grid b{
-    font-size:28px;
+.promise-grid strong{
+    font-size:27px;
 }
 
 .promise-grid h3{
@@ -522,7 +418,7 @@ a{
 
 /* FAQ */
 
-.faq-section{
+.faq{
     padding:80px 6%;
 }
 
@@ -539,13 +435,11 @@ details{
 summary{
     cursor:pointer;
     font-weight:bold;
-    font-size:16px;
 }
 
 details p{
     color:#666;
-    margin-top:12px;
-    padding-right:30px;
+    margin-top:10px;
 }
 
 
@@ -555,8 +449,8 @@ details p{
     display:none;
     position:fixed;
     inset:0;
+    z-index:4000;
     background:rgba(0,0,0,.7);
-    z-index:3000;
     padding:20px;
     overflow-y:auto;
 }
@@ -568,28 +462,28 @@ details p{
 }
 
 .modal-box{
-    background:#fff;
     width:100%;
     max-width:550px;
+    background:#fff;
+    border-radius:17px;
     padding:35px;
-    border-radius:18px;
     position:relative;
 }
 
-.modal-close{
+.close-modal{
     position:absolute;
     right:18px;
-    top:12px;
-    border:0;
+    top:10px;
     background:none;
+    border:0;
     font-size:30px;
     cursor:pointer;
 }
 
-.modal-label{
-    font-size:11px;
-    letter-spacing:2px;
+.modal-box>span{
+    font-size:10px;
     color:#777;
+    letter-spacing:2px;
     font-weight:bold;
 }
 
@@ -597,7 +491,7 @@ details p{
     margin:8px 0;
 }
 
-.modal-box > p{
+.modal-box>p{
     color:#777;
     margin-bottom:20px;
 }
@@ -617,9 +511,9 @@ details p{
     width:100%;
     padding:15px;
     border:0;
+    border-radius:8px;
     background:#111;
     color:#fff;
-    border-radius:8px;
     font-weight:bold;
     cursor:pointer;
 }
@@ -628,43 +522,42 @@ details p{
 /* FOOTER */
 
 footer{
-    background:#0b0b0b;
+    background:#050505;
     color:#fff;
     padding:55px 7% 20px;
 }
 
-.footer-main{
+.service-footer{
+    max-width:1100px;
+    margin:auto;
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
     gap:60px;
-    max-width:1100px;
-    margin:auto;
 }
 
-.footer-logo{
+.service-footer>div>strong{
     font-size:28px;
-    font-weight:900;
 }
 
-.footer-main p{
+.service-footer p{
     color:#aaa;
     max-width:350px;
-    margin-top:8px;
+    margin-top:10px;
 }
 
-.footer-main h3{
+.service-footer h3{
     margin-bottom:12px;
 }
 
-.footer-main a,
-.footer-main span{
+.service-footer a,
+.service-footer span{
     display:block;
     color:#aaa;
     font-size:14px;
     margin:7px 0;
 }
 
-.footer-bottom{
+.copyright{
     max-width:1100px;
     margin:40px auto 0;
     padding-top:20px;
@@ -674,38 +567,32 @@ footer{
 }
 
 
-/* FLOATING WHATSAPP */
+/* FLOATING */
 
-.floating-whatsapp{
+.floating-wa{
     position:fixed;
     right:20px;
     bottom:20px;
+    z-index:3500;
     background:#111;
     color:#fff;
     padding:13px 20px;
     border-radius:30px;
     font-weight:bold;
-    z-index:2500;
-    box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
 
 /* RESPONSIVE */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
-    .desktop-nav,
-    .header-actions{
+    .service-header nav,
+    .service-header-actions{
         display:none;
     }
 
-    .mobile-menu{
+    .service-menu-button{
         display:block;
-    }
-
-    .intro-section{
-        grid-template-columns:1fr;
-        gap:20px;
     }
 
     .service-grid{
@@ -716,71 +603,61 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
-    .hero-inner h1{
-        font-size:45px;
-    }
-
 }
 
+@media(max-width:650px){
 
-@media(max-width:600px){
-
-    .site-header{
+    .service-header{
         height:70px;
     }
 
-    .mobile-nav{
+    .service-mobile-menu{
         top:70px;
     }
 
-    .services-hero{
+    .service-hero{
         min-height:500px;
     }
 
-    .hero-inner h1{
-        font-size:36px;
+    .service-hero h1{
+        font-size:38px;
     }
 
-    .hero-inner p{
+    .service-hero p{
         font-size:16px;
     }
 
     .hero-actions{
         flex-direction:column;
-        max-width:230px;
+        width:220px;
     }
 
-    .category-bar{
-        top:70px;
+    .category-bar a{
+        padding:14px 5px;
     }
 
-    .category-inner{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .category{
-        padding:14px 4px;
-    }
-
-    .category span{
-        font-size:19px;
-    }
-
-    .category strong{
+    .category-bar span{
         font-size:11px;
     }
 
-    .intro-section,
-    .service-section,
-    .repair-section,
-    .installation-section,
-    .promise-section,
-    .faq-section{
-        padding:55px 5%;
+    .intro{
+        grid-template-columns:1fr;
+        gap:20px;
     }
 
-    .section-title h2,
-    .intro-section h2{
+    .intro h2{
+        font-size:31px;
+    }
+
+    .service-area-section,
+    .repair-area,
+    .installation-area,
+    .promise,
+    .faq{
+        padding:60px 5%;
+    }
+
+    .section-title h2{
         font-size:30px;
     }
 
@@ -792,14 +669,9 @@ footer{
         padding:25px 20px;
     }
 
-    .footer-main{
+    .service-footer{
         grid-template-columns:1fr;
         gap:30px;
-    }
-
-    .floating-whatsapp{
-        right:12px;
-        bottom:12px;
     }
 
 }
