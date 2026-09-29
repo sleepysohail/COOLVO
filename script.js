@@ -1,92 +1,166 @@
-/* MOBILE MENU */
-
-function toggleMenu(){
-
-    const nav = document.getElementById("mainNav");
-
-    nav.classList.toggle("show");
-
-}
+/* =====================================
+   COOLVO HOMEPAGE JAVASCRIPT
+===================================== */
 
 
-/* SELECT SERVICE */
+/* HERO SLIDER */
 
-function selectService(service){
+const slides = document.querySelectorAll(".hero-slide");
 
-    const select = document.getElementById("selectedService");
+let currentSlide = 0;
 
-    select.value = service;
+function showSlide(index){
 
-    document.getElementById("booking").scrollIntoView({
-        behavior:"smooth"
+    slides.forEach(slide => {
+        slide.classList.remove("active");
     });
 
+    if(slides[index]){
+        slides[index].classList.add("active");
+    }
+}
+
+if(slides.length > 1){
+
+    setInterval(() => {
+
+        currentSlide++;
+
+        if(currentSlide >= slides.length){
+            currentSlide = 0;
+        }
+
+        showSlide(currentSlide);
+
+    },4000);
+
 }
 
 
-/* BOOKING FORM */
+/* MOBILE MENU */
 
-document
-.getElementById("bookingForm")
-.addEventListener("submit", function(e){
+function toggleMobileMenu(){
 
-    e.preventDefault();
+    const menu = document.getElementById("mobileMenu");
 
-    const name =
-        document.getElementById("customerName").value.trim();
+    if(menu){
+        menu.classList.toggle("show");
+    }
 
-    const phone =
-        document.getElementById("customerPhone").value.trim();
-
-    const location =
-        document.getElementById("customerLocation").value.trim();
-
-    const service =
-        document.getElementById("selectedService").value;
-
-    const time =
-        document.getElementById("preferredTime").value;
-
-    const problem =
-        document.getElementById("problem").value.trim();
+}
 
 
-    if(!name || !phone || !location || !service){
+/* CLOSE MOBILE MENU AFTER CLICK */
 
-        alert("Please fill all required details.");
+document.querySelectorAll(".mobile-menu a").forEach(link => {
 
-        return;
+    link.addEventListener("click", () => {
+
+        const menu = document.getElementById("mobileMenu");
+
+        if(menu){
+            menu.classList.remove("show");
+        }
+
+    });
+
+});
+
+
+/* QUICK BOOKING */
+
+function openQuickBooking(service){
+
+    const contactSection = document.getElementById("contact");
+
+    const serviceSelect = document.getElementById("service");
+
+    if(serviceSelect){
+        serviceSelect.value = service;
+    }
+
+    if(contactSection){
+
+        contactSection.scrollIntoView({
+            behavior:"smooth"
+        });
 
     }
 
+}
 
-    const message =
 
-`*NEW COOLVO BOOKING REQUEST*
+/* HOMEPAGE BOOKING FORM */
 
-👤 Name: ${name}
+const bookingForm = document.getElementById("bookingForm");
 
-📱 Phone: ${phone}
+if(bookingForm){
 
-📍 Location: ${location}
+    bookingForm.addEventListener("submit", function(event){
 
-🔧 Service: ${service}
+        event.preventDefault();
 
-🕐 Preferred Time: ${time || "Not specified"}
+        const name =
+            document.getElementById("name").value.trim();
 
-📝 Problem:
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const city =
+            document.getElementById("city").value.trim();
+
+        const service =
+            document.getElementById("service").value;
+
+        const problem =
+            document.getElementById("problem").value.trim();
+
+
+        if(!name || !phone || !city || !service){
+
+            alert("Please fill all required details.");
+
+            return;
+        }
+
+
+        const message =
+`*NEW COOLVO SERVICE REQUEST*
+
+Service:
+${service}
+
+Customer:
+${name}
+
+Phone:
+${phone}
+
+Location:
+${city}
+
+Problem:
 ${problem || "Not specified"}
 
-━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━
 
-Sent from COOLVO.IN`;
+COOLVO.IN
+Home Appliance Service
+
+Working Hours:
+9 AM – 10 PM
+Friday Off`;
 
 
-    const whatsappURL =
-        "https://wa.me/916399843648?text="
-        + encodeURIComponent(message);
+        const whatsappURL =
+            "https://wa.me/916399843648?text=" +
+            encodeURIComponent(message);
 
 
-    window.open(whatsappURL, "_blank");
+        window.open(whatsappURL,"_blank");
 
-});
+        bookingForm.reset();
+
+    });
+
+}
