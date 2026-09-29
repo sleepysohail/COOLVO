@@ -3,230 +3,666 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coolvo.in | Home Appliance Services</title>
 
-<meta name="description" content="AC Repair, AC Installation, Refrigerator Repair, Washing Machine Repair, Copper Piping and Spare Parts in Pilibhit, Puranpur, Bisalpur and nearby areas.">
+<title>COOLVO | AC & Home Appliance Service in Pilibhit</title>
+
+<meta name="description"
+content="COOLVO provides AC repair, installation, gas service, refrigerator, washing machine and home appliance services in Pilibhit and nearby areas.">
+
+<meta name="theme-color" content="#111111">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<div class="logo">
-❄️ COOLVO.IN
-</div>
+<!-- HEADER -->
+<header class="header">
 
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#parts">Spare Parts</a>
-<a href="#stickers">Sticker Art</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
+    <div class="logo">
+        <span>CO</span><b>O</b><span>LVO</span>
+        <small>HOME APPLIANCE SERVICE</small>
+    </div>
+
+    <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#parts">Spare Parts</a>
+        <a href="#booking">Booking</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-buttons">
+        <a href="https://wa.me/916399843648" class="mini-whatsapp">
+            WhatsApp
+        </a>
+
+        <a href="tel:6399843648" class="mini-call">
+            Call
+        </a>
+    </div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
 </header>
 
+
+<!-- HERO -->
 <section id="home" class="hero">
 
-<div class="slider">
+    <div class="hero-overlay"></div>
 
-<div class="slide active">
-<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1600&q=80">
-</div>
+    <div class="hero-content">
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80">
-</div>
+        <span class="small-title">
+            FAST • RELIABLE • PROFESSIONAL
+        </span>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80">
-</div>
+        <h1>
+            AC, Fridge, Washing Machine
+            <br>
+            & Home Appliance Service
+        </h1>
 
-</div>
+        <p>
+            Professional doorstep repair and service
+            in Pilibhit & nearby areas.
+        </p>
 
-<div class="hero-content">
+        <div class="hero-buttons">
 
-<h1>AC, Fridge & Washing Machine Service</h1>
+            <a href="#booking" class="primary-btn">
+                Book Service
+            </a>
 
-<p>
-Professional Home Appliance Services In Pilibhit &
-Nearby Areas
-</p>
+            <a href="https://wa.me/916399843648" class="whatsapp-btn">
+                WhatsApp
+            </a>
 
-<a href="tel:6399843648" class="btn call">
-Call Now
-</a>
+        </div>
 
-<a href="https://wa.me/916399843648"
-class="btn whatsapp">
-WhatsApp
-</a>
-
-</div>
+    </div>
 
 </section>
 
-<section id="services">
 
-<h2>Our Services</h2>
+<!-- QUICK INFO -->
+<section class="quick-info">
 
-<div class="cards">
+    <div>
+        <strong>Working Hours</strong>
+        <span>9:00 AM – 10:00 PM</span>
+    </div>
 
-<div class="card">
-<h3>AC Repair</h3>
-<p>Cooling, gas charging & servicing.</p>
+    <div>
+        <strong>Weekly Off</strong>
+        <span>Friday</span>
+    </div>
 
-<button onclick="openBooking('AC Repair')">
-Book Service
-</button>
-</div>
-
-<div class="card">
-<h3>AC Installation</h3>
-<p>Split & Window AC installation.</p>
-
-<button onclick="openBooking('AC Installation')">
-Book Service
-</button>
-</div>
-
-<div class="card">
-<h3>Refrigerator Repair</h3>
-<p>Cooling and compressor solutions.</p>
-
-<button onclick="openBooking('Fridge Repair')">
-Book Service
-</button>
-</div>
-
-<div class="card">
-<h3>Washing Machine Repair</h3>
-<p>Automatic & Semi Automatic.</p>
-
-<button onclick="openBooking('Washing Machine Repair')">
-Book Service
-</button>
-</div>
-
-</div>
+    <div>
+        <strong>Service Area</strong>
+        <span>Pilibhit + Nearby Areas</span>
+    </div>
 
 </section>
 
-<section id="parts">
 
-<h2>Spare Parts & Accessories</h2>
+<!-- SERVICES -->
+<section id="services" class="section">
 
-<div class="cards">
+    <div class="section-heading">
+        <span>OUR SERVICES</span>
+        <h2>Home Appliance Service & Repair</h2>
+        <p>
+            Choose your appliance and send us a booking request.
+        </p>
+    </div>
 
-<div class="card">AC Filter</div>
-<div class="card">AC Perfume</div>
-<div class="card">AC Sticker</div>
-<div class="card">Washing Machine Pipe</div>
-<div class="card">Spin Cap</div>
-<div class="card">Door Filter</div>
-<div class="card">Fridge Tray</div>
-<div class="card">Bottle Tray</div>
 
-</div>
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <div class="service-icon">❄️</div>
+
+            <h3>AC Service & Repair</h3>
+
+            <p>
+                AC servicing, cooling problems,
+                inspection and repair.
+            </p>
+
+            <button onclick="selectService('AC Service & Repair')">
+                Book Service →
+            </button>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">🔧</div>
+
+            <h3>AC Installation</h3>
+
+            <p>
+                Professional split and window
+                AC installation.
+            </p>
+
+            <button onclick="selectService('AC Installation')">
+                Book Service →
+            </button>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">⚙️</div>
+
+            <h3>AC Gas Service</h3>
+
+            <p>
+                Gas checking, leakage inspection
+                and cooling diagnosis.
+            </p>
+
+            <button onclick="selectService('AC Gas Service')">
+                Book Service →
+            </button>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">🧊</div>
+
+            <h3>Refrigerator Repair</h3>
+
+            <p>
+                Refrigerator cooling and
+                appliance repair service.
+            </p>
+
+            <button onclick="selectService('Refrigerator Repair')">
+                Book Service →
+            </button>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">🌀</div>
+
+            <h3>Washing Machine Repair</h3>
+
+            <p>
+                Automatic and semi-automatic
+                washing machine service.
+            </p>
+
+            <button onclick="selectService('Washing Machine Repair')">
+                Book Service →
+            </button>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">🏠</div>
+
+            <h3>Other Home Appliances</h3>
+
+            <p>
+                Service and repair for various
+                household appliances.
+            </p>
+
+            <button onclick="selectService('Other Home Appliance')">
+                Book Service →
+            </button>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="stickers">
 
-<h2>AC Sticker Art Collection</h2>
+<!-- WHY COOLVO -->
+<section id="about" class="dark-section">
 
-<div class="gallery">
+    <div class="section-heading light">
 
-<img src="https://picsum.photos/400/300?1">
-<img src="https://picsum.photos/400/300?2">
-<img src="https://picsum.photos/400/300?3">
-<img src="https://picsum.photos/400/300?4">
+        <span>WHY COOLVO?</span>
 
-</div>
+        <h2>Service You Can Trust</h2>
 
-</section>
+        <p>
+            Professional doorstep appliance service
+            from Coolvo.
+        </p>
 
-<section id="gallery">
+    </div>
 
-<h2>Service Gallery</h2>
 
-<div class="gallery">
+    <div class="trust-grid">
 
-<img src="https://picsum.photos/400/300?5">
-<img src="https://picsum.photos/400/300?6">
-<img src="https://picsum.photos/400/300?7">
-<img src="https://picsum.photos/400/300?8">
+        <div>
+            <strong>01</strong>
+            <h3>Professional Service</h3>
+            <p>
+                Appliance service focused on
+                quality and customer satisfaction.
+            </p>
+        </div>
 
-</div>
+        <div>
+            <strong>02</strong>
+            <h3>Transparent Request</h3>
+            <p>
+                Send your requirement first.
+                Final service details can be confirmed.
+            </p>
+        </div>
 
-</section>
+        <div>
+            <strong>03</strong>
+            <h3>Doorstep Service</h3>
+            <p>
+                Service available at your home
+                in our coverage areas.
+            </p>
+        </div>
 
-<section id="contact">
+        <div>
+            <strong>04</strong>
+            <h3>Local Support</h3>
+            <p>
+                Serving Pilibhit and surrounding
+                areas.
+            </p>
+        </div>
 
-<h2>Book Service</h2>
-
-<form id="bookingForm">
-
-<input type="text"
-id="name"
-placeholder="Your Name"
-required>
-
-<input type="tel"
-id="phone"
-placeholder="Mobile Number"
-required>
-
-<input type="text"
-id="city"
-placeholder="City"
-required>
-
-<select id="service">
-
-<option>AC Repair</option>
-<option>AC Installation</option>
-<option>Fridge Repair</option>
-<option>Washing Machine Repair</option>
-
-</select>
-
-<textarea
-id="problem"
-placeholder="Describe Problem">
-</textarea>
-
-<button type="submit">
-Send On WhatsApp
-</button>
-
-</form>
+    </div>
 
 </section>
 
-<section class="instagram">
 
-<h2>Follow Us</h2>
+<!-- HOW IT WORKS -->
+<section class="section">
 
-<a href="https://instagram.com/coolvo.in">
-@coolvo.in
-</a>
+    <div class="section-heading">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>Book Your Service</h2>
+
+        <p>
+            Simple booking request in four steps.
+        </p>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+            <b>1</b>
+            <h3>Select Service</h3>
+            <p>Choose your appliance and service.</p>
+        </div>
+
+        <div class="step">
+            <b>2</b>
+            <h3>Fill Details</h3>
+            <p>Tell us your name, phone and location.</p>
+        </div>
+
+        <div class="step">
+            <b>3</b>
+            <h3>Send Request</h3>
+            <p>Your request is prepared for WhatsApp.</p>
+        </div>
+
+        <div class="step">
+            <b>4</b>
+            <h3>We Contact You</h3>
+            <p>Coolvo can contact you to confirm.</p>
+        </div>
+
+    </div>
 
 </section>
 
+
+<!-- SERVICE AREA -->
+<section class="area-section">
+
+    <div>
+
+        <span>SERVICE AREA</span>
+
+        <h2>
+            We Serve Pilibhit
+            <br>
+            & Nearby Areas
+        </h2>
+
+        <p>
+            Our current service areas include
+            Pilibhit, Puranpur, Bisalpur,
+            Amariya, Majhola and surrounding areas.
+        </p>
+
+        <p class="area-note">
+            Nearby areas may be available depending
+            on service and location.
+        </p>
+
+    </div>
+
+
+    <div class="area-box">
+
+        <div class="map-circle">
+            📍
+        </div>
+
+        <strong>PILIBHIT</strong>
+
+        <span>Nearby Areas</span>
+
+    </div>
+
+</section>
+
+
+<!-- WARRANTY -->
+<section class="warranty-section">
+
+    <div class="section-heading light">
+
+        <span>COOLVO WARRANTY</span>
+
+        <h2>Clear Warranty Policy</h2>
+
+        <p>
+            Warranty applies according to the
+            applicable service/part conditions.
+        </p>
+
+    </div>
+
+
+    <div class="warranty-grid">
+
+        <div>
+            <b>PCB</b>
+            <strong>10 Days</strong>
+        </div>
+
+        <div>
+            <b>MOTOR</b>
+            <strong>15 Days</strong>
+        </div>
+
+        <div>
+            <b>GAS</b>
+            <strong>30 Days</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPARE PARTS -->
+<section id="parts" class="section">
+
+    <div class="section-heading">
+
+        <span>SPARE PARTS</span>
+
+        <h2>Appliance Parts & Accessories</h2>
+
+        <p>
+            Parts and accessories can be enquired
+            about through WhatsApp.
+        </p>
+
+    </div>
+
+
+    <div class="parts-grid">
+
+        <div>AC Filter</div>
+        <div>AC Perfume</div>
+        <div>AC Sticker</div>
+        <div>Washing Machine Pipe</div>
+        <div>Spin Cap</div>
+        <div>Door / Filter</div>
+        <div>Fridge Tray</div>
+        <div>Bottle Tray</div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING -->
+<section id="booking" class="booking-section">
+
+    <div class="section-heading">
+
+        <span>BOOKING REQUEST</span>
+
+        <h2>Request a Service</h2>
+
+        <p>
+            Fill the form and your request will
+            open in WhatsApp.
+        </p>
+
+    </div>
+
+
+    <form id="bookingForm">
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="Mobile Number"
+            required
+        >
+
+        <input
+            type="text"
+            id="customerLocation"
+            placeholder="Your Area / City"
+            required
+        >
+
+        <select id="selectedService" required>
+
+            <option value="">
+                Select Service
+            </option>
+
+            <option>AC Service & Repair</option>
+            <option>AC Installation</option>
+            <option>AC Gas Service</option>
+            <option>Refrigerator Repair</option>
+            <option>Washing Machine Repair</option>
+            <option>Other Home Appliance</option>
+
+        </select>
+
+
+        <select id="preferredTime">
+
+            <option value="">
+                Preferred Time
+            </option>
+
+            <option>9 AM – 12 PM</option>
+            <option>12 PM – 3 PM</option>
+            <option>3 PM – 6 PM</option>
+            <option>6 PM – 10 PM</option>
+
+        </select>
+
+
+        <textarea
+            id="problem"
+            rows="5"
+            placeholder="Describe your appliance problem"
+        ></textarea>
+
+
+        <button type="submit">
+            Send Booking Request on WhatsApp
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+
+    <div class="section-heading">
+
+        <span>CUSTOMER REVIEWS</span>
+
+        <h2>What Our Customers Say</h2>
+
+        <p>
+            Real customer reviews will be displayed
+            here as they become available.
+        </p>
+
+    </div>
+
+
+    <div class="review-placeholder">
+
+        <div>
+            <strong>Google Reviews</strong>
+
+            <p>
+                Review section will be connected
+                with Coolvo's Google Business Profile.
+            </p>
+
+            <a href="#" class="review-btn">
+                View on Google
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+
+    <h2>Need Appliance Service?</h2>
+
+    <p>
+        Contact Coolvo for a booking request.
+    </p>
+
+    <div class="contact-buttons">
+
+        <a href="https://wa.me/916399843648">
+            WhatsApp
+        </a>
+
+        <a href="tel:6399843648">
+            Call Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 <footer>
 
-<p>Phone: 6399843648</p>
+    <div class="footer-logo">
+        COOLVO
+        <small>HOME APPLIANCE SERVICE</small>
+    </div>
 
-<p>Email: alisohilali@gmail.com</p>
 
-<p>
-Pilibhit | Puranpur | Bisalpur |
-Amariya | Majhola
-</p>
+    <div class="footer-columns">
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#parts">Spare Parts</a>
+            <a href="#booking">Booking</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+        <div>
+            <h3>Services</h3>
+            <span>AC Repair</span>
+            <span>AC Installation</span>
+            <span>AC Gas Service</span>
+            <span>Fridge Repair</span>
+            <span>Washing Machine Repair</span>
+        </div>
+
+
+        <div>
+            <h3>Contact</h3>
+            <span>📞 6399843648</span>
+            <span>✉️ alisohilali@gmail.com</span>
+            <span>📍 Pilibhit, Uttar Pradesh</span>
+            <span>⏰ 9 AM – 10 PM</span>
+            <span>Friday Off</span>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 COOLVO.IN | All Rights Reserved.
+
+    </div>
 
 </footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a
+href="https://wa.me/916399843648"
+class="floating-whatsapp"
+target="_blank"
+>
+    WhatsApp
+</a>
+
 
 <script src="script.js"></script>
 
