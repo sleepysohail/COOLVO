@@ -1,677 +1,619 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#fff;
-    color:#111;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
+/* =========================================================
+   COOLVO.IN — SERVICES PAGE
+   ========================================================= */
 
 
-/* HEADER */
+/* ================= SERVICES HERO ================= */
 
-.service-header{
-    height:76px;
-    padding:0 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    background:#fff;
-    border-bottom:1px solid #e5e5e5;
-    position:sticky;
-    top:0;
-    z-index:2000;
-}
-
-.service-logo{
-    display:flex;
-    flex-direction:column;
-    line-height:1;
-}
-
-.service-logo span{
-    font-size:26px;
-    font-weight:900;
-}
-
-.service-logo small{
-    font-size:7px;
-    letter-spacing:1.5px;
-    color:#777;
-    margin-top:5px;
-}
-
-.service-header nav{
-    display:flex;
-    gap:25px;
-}
-
-.service-header nav a{
-    font-size:14px;
-    font-weight:600;
-}
-
-.service-header nav a.active{
-    text-decoration:underline;
-}
-
-.service-header-actions{
-    display:flex;
-    gap:8px;
-}
-
-.service-header-actions a{
-    padding:9px 15px;
-    border-radius:22px;
-    border:1px solid #111;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.service-header-actions a:last-child{
-    background:#111;
-    color:#fff;
-}
-
-.service-menu-button{
-    display:none;
-    border:0;
-    background:none;
-    font-size:26px;
-}
-
-
-/* MOBILE */
-
-.service-mobile-menu{
-    display:none;
-    position:fixed;
-    top:76px;
-    left:0;
-    width:100%;
-    background:#fff;
-    z-index:1900;
-    padding:20px;
-    border-bottom:1px solid #ddd;
-}
-
-.service-mobile-menu.show{
-    display:block;
-}
-
-.service-mobile-menu a{
-    display:block;
-    padding:14px 0;
-    border-bottom:1px solid #eee;
-    font-weight:bold;
-}
-
-
-/* HERO */
-
-.service-hero{
-    min-height:500px;
-    background:linear-gradient(
-        115deg,
-        #080808,
-        #292929 65%,
-        #555
+.services-hero{
+  min-height:560px;
+  padding:100px 7%;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(29,164,220,.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      120deg,
+      #07090b,
+      #101a20 55%,
+      #063d58
     );
-    color:#fff;
-    display:flex;
-    align-items:center;
 }
 
-.service-hero-content{
-    width:88%;
-    max-width:1100px;
-    margin:auto;
+.services-hero:after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  right:-100px;
+  bottom:-180px;
 }
 
-.service-hero-content>span{
-    color:#aaa;
-    font-size:12px;
-    letter-spacing:2px;
-    font-weight:bold;
+.services-hero>div{
+  max-width:850px;
+  position:relative;
+  z-index:2;
 }
 
-.service-hero h1{
-    font-size:60px;
-    line-height:1.05;
-    margin:18px 0;
+.services-hero span{
+  font-size:11px;
+  letter-spacing:2.5px;
+  font-weight:800;
+  color:#9da7ad;
 }
 
-.service-hero p{
-    max-width:680px;
-    color:#ddd;
-    font-size:18px;
+.services-hero h1{
+  font-size:70px;
+  line-height:.96;
+  margin:18px 0;
 }
 
-.hero-actions{
-    display:flex;
-    gap:12px;
-    margin-top:30px;
+.services-hero h1 em{
+  color:#69c9f1;
+  font-style:normal;
 }
 
-.hero-main-button,
-.hero-outline-button{
-    padding:14px 24px;
-    border-radius:28px;
-    font-weight:bold;
+.services-hero p{
+  max-width:680px;
+  font-size:18px;
+  color:#d1d7da;
 }
 
-.hero-main-button{
-    background:#fff;
-    color:#111;
+.services-hero-actions{
+  display:flex;
+  gap:12px;
+  margin-top:30px;
 }
 
-.hero-outline-button{
-    border:1px solid #fff;
+.service-primary-btn,
+.service-secondary-btn{
+  border-radius:30px;
+  padding:14px 22px;
+  font-weight:800;
+  font-size:14px;
 }
 
-
-/* CATEGORY */
-
-.category-bar{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    max-width:850px;
-    margin:auto;
-    border-bottom:1px solid #eee;
+.service-primary-btn{
+  border:0;
+  background:#fff;
+  color:#111;
 }
 
-.category-bar a{
-    text-align:center;
-    padding:20px;
-    border-bottom:3px solid transparent;
-}
-
-.category-bar a:hover{
-    border-bottom-color:#111;
-}
-
-.category-bar strong,
-.category-bar span{
-    display:block;
-}
-
-.category-bar strong{
-    font-size:23px;
-}
-
-.category-bar span{
-    font-size:13px;
-    font-weight:bold;
-    margin-top:5px;
+.service-secondary-btn{
+  border:1px solid rgba(255,255,255,.7);
+  color:#fff;
 }
 
 
-/* INTRO */
+/* ================= SERVICES MAIN ================= */
 
-.intro{
-    max-width:1100px;
-    margin:auto;
-    padding:75px 5%;
-    display:grid;
+.services-main{
+  padding:90px 6%;
+  background:#fff;
+}
+
+.services-heading{
+  max-width:750px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.services-heading>span{
+  font-size:11px;
+  letter-spacing:2.5px;
+  color:#858b90;
+  font-weight:800;
+}
+
+.services-heading h2{
+  font-size:44px;
+  line-height:1.05;
+  margin:10px 0;
+}
+
+.services-heading p{
+  color:#666a70;
+}
+
+
+/* ================= DETAIL GRID ================= */
+
+.service-detail-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.service-detail-card{
+  padding:30px;
+  border:1px solid #e4e6e8;
+  border-radius:18px;
+  background:#fff;
+  position:relative;
+  transition:.2s;
+}
+
+.service-detail-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
+}
+
+.service-detail-card.featured-service{
+  border-color:#a8d9ee;
+  box-shadow:inset 0 3px 0 #087fbd;
+}
+
+.service-number{
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:#111;
+  color:#fff;
+  font-size:13px;
+  font-weight:900;
+  margin-bottom:22px;
+}
+
+.service-detail-card>span{
+  font-size:10px;
+  letter-spacing:1.8px;
+  color:#858a8f;
+  font-weight:800;
+}
+
+.service-detail-card h3{
+  font-size:25px;
+  margin:8px 0;
+}
+
+.service-detail-card p{
+  color:#666a70;
+  font-size:14px;
+}
+
+.service-detail-card ul{
+  list-style:none;
+  margin:20px 0;
+  padding:0;
+}
+
+.service-detail-card li{
+  padding:7px 0;
+  border-bottom:1px solid #f0f0f0;
+  font-size:13px;
+}
+
+.service-detail-card li:before{
+  content:"✓";
+  margin-right:8px;
+  font-weight:900;
+}
+
+.service-detail-card button{
+  border:0;
+  background:none;
+  padding:0;
+  font-weight:900;
+  font-size:14px;
+}
+
+
+/* ================= APPLIANCES ================= */
+
+.appliance-services{
+  padding:90px 6%;
+  background:#f5f6f7;
+}
+
+.appliance-grid{
+  max-width:1050px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.appliance-grid article{
+  background:#fff;
+  border:1px solid #e3e5e7;
+  border-radius:17px;
+  padding:28px;
+}
+
+.appliance-icon{
+  width:52px;
+  height:52px;
+  border-radius:13px;
+  background:#111;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+.appliance-grid h3{
+  font-size:20px;
+}
+
+.appliance-grid p{
+  color:#666a70;
+  font-size:14px;
+  margin:8px 0 20px;
+}
+
+.appliance-grid button{
+  border:0;
+  background:none;
+  font-weight:800;
+  padding:0;
+}
+
+
+/* ================= PARTS ================= */
+
+.service-parts{
+  padding:90px 6%;
+  text-align:center;
+}
+
+.parts-grid{
+  max-width:950px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.parts-grid span{
+  padding:11px 16px;
+  border:1px solid #ddd;
+  border-radius:30px;
+  background:#f7f7f7;
+  font-size:13px;
+  font-weight:700;
+}
+
+.parts-contact{
+  display:inline-block;
+  margin-top:28px;
+  font-weight:900;
+}
+
+
+/* ================= PROCESS ================= */
+
+.service-process{
+  padding:90px 6%;
+  background:#0d0f11;
+  color:#fff;
+}
+
+.service-process .services-heading>span{
+  color:#8d969c;
+}
+
+.service-process .services-heading h2{
+  color:#fff;
+}
+
+.service-process .services-heading p{
+  color:#aab0b5;
+}
+
+.process-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.process-grid div{
+  border:1px solid #2d3135;
+  border-radius:15px;
+  padding:25px;
+}
+
+.process-grid b{
+  color:#68c8f0;
+  font-size:12px;
+}
+
+.process-grid h3{
+  margin:10px 0 6px;
+}
+
+.process-grid p{
+  color:#aab0b5;
+  font-size:13px;
+}
+
+
+/* ================= SERVICE AREAS ================= */
+
+.service-areas{
+  padding:75px 7%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  background:#f5f6f7;
+  align-items:center;
+}
+
+.service-areas>div:first-child>span{
+  font-size:11px;
+  letter-spacing:2px;
+  color:#777;
+  font-weight:800;
+}
+
+.service-areas h2{
+  font-size:40px;
+  line-height:1.05;
+  margin:10px 0;
+}
+
+.service-areas p{
+  color:#666a70;
+}
+
+.service-area-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.service-area-list span{
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:25px;
+  padding:11px 15px;
+  font-size:13px;
+  font-weight:700;
+}
+
+
+/* ================= WARRANTY ================= */
+
+.service-warranty{
+  padding:65px 7%;
+  display:flex;
+  gap:25px;
+  align-items:center;
+  background:#111;
+  color:#fff;
+}
+
+.warranty-badge{
+  width:100px;
+  height:100px;
+  flex:none;
+  border:2px solid #fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  font-size:30px;
+  font-weight:900;
+}
+
+.warranty-badge small{
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.service-warranty span{
+  color:#8f969c;
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:800;
+}
+
+.service-warranty h2{
+  font-size:32px;
+  margin:5px 0;
+}
+
+.service-warranty p{
+  color:#aeb4b8;
+}
+
+
+/* ================= BOOKING MODAL ================= */
+
+.service-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:6000;
+  background:rgba(0,0,0,.7);
+  padding:20px;
+  align-items:center;
+  justify-content:center;
+}
+
+.service-modal.show{
+  display:flex;
+}
+
+.service-modal-box{
+  width:100%;
+  max-width:520px;
+  max-height:90vh;
+  overflow:auto;
+  position:relative;
+  background:#fff;
+  border-radius:20px;
+  padding:35px;
+}
+
+.service-modal-box>span{
+  font-size:10px;
+  letter-spacing:2px;
+  color:#777;
+  font-weight:800;
+}
+
+.service-modal-box h2{
+  font-size:30px;
+  margin:8px 0;
+}
+
+.service-modal-box>p{
+  color:#666a70;
+  font-size:13px;
+  margin-bottom:20px;
+}
+
+.modal-close{
+  position:absolute;
+  right:18px;
+  top:15px;
+  width:35px;
+  height:35px;
+  border:0;
+  background:#f0f1f2;
+  border-radius:50%;
+  font-size:22px;
+}
+
+#serviceBookingForm{
+  display:grid;
+  gap:11px;
+}
+
+#serviceBookingForm input,
+#serviceBookingForm select,
+#serviceBookingForm textarea{
+  width:100%;
+  border:1px solid #d9dde0;
+  border-radius:9px;
+  padding:13px;
+  outline:none;
+  background:#fff;
+}
+
+#serviceBookingForm input:focus,
+#serviceBookingForm select:focus,
+#serviceBookingForm textarea:focus{
+  border-color:#5db7db;
+}
+
+#serviceBookingForm button{
+  margin-top:4px;
+  border:0;
+  background:#111;
+  color:#fff;
+  border-radius:10px;
+  padding:14px;
+  font-weight:900;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+  .services-hero{
+    min-height:580px;
+    padding:75px 6%;
+  }
+
+  .services-hero h1{
+    font-size:49px;
+  }
+
+  .services-hero p{
+    font-size:16px;
+  }
+
+  .services-hero-actions{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .service-detail-grid{
+    grid-template-columns:1fr;
+  }
+
+  .appliance-grid{
+    grid-template-columns:1fr;
+  }
+
+  .process-grid{
     grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
+  }
 
-.intro span,
-.section-title>span{
-    color:#777;
-    font-size:11px;
-    letter-spacing:2px;
-    font-weight:bold;
-}
+  .service-areas{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
 
-.intro h2{
-    font-size:40px;
-    line-height:1.15;
-    margin-top:10px;
-}
-
-.intro p{
-    color:#666;
 }
 
 
-/* SERVICE SECTIONS */
+@media(max-width:550px){
 
-.service-area-section,
-.repair-area,
-.installation-area{
-    padding:80px 6%;
-}
+  .services-main,
+  .appliance-services,
+  .service-parts,
+  .service-process{
+    padding:65px 5%;
+  }
 
-.repair-area{
-    background:#f7f7f7;
-}
+  .services-heading h2{
+    font-size:34px;
+  }
 
-.installation-area{
-    background:#fff;
-}
+  .services-hero h1{
+    font-size:43px;
+  }
 
-.section-title{
-    max-width:1100px;
-    margin:0 auto 40px;
-}
+  .service-detail-card{
+    padding:24px;
+  }
 
-.section-title h2{
-    font-size:38px;
-    line-height:1.15;
-    margin:8px 0;
-}
+  .process-grid{
+    grid-template-columns:1fr;
+  }
 
-.section-title p{
-    color:#666;
-}
+  .service-areas{
+    padding:60px 5%;
+  }
 
-
-/* CARDS */
-
-.service-grid{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.ac-card{
-    background:#fff;
-    border:1px solid #e2e2e2;
-    border-radius:14px;
-    overflow:hidden;
-    transition:.25s;
-}
-
-.ac-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-}
-
-.ac-image{
-    height:210px;
-    background:linear-gradient(135deg,#111,#777);
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  .service-areas h2{
     font-size:32px;
-    font-weight:900;
-    letter-spacing:3px;
-}
+  }
 
-.ac-content{
-    padding:25px;
-}
+  .service-warranty{
+    padding:50px 5%;
+    align-items:flex-start;
+  }
 
-.ac-content>small{
-    color:#777;
-    font-size:10px;
-    letter-spacing:1.5px;
-    font-weight:bold;
-}
-
-.ac-content h3{
-    font-size:21px;
-    margin:8px 0;
-}
-
-.ac-content p{
-    color:#666;
-    font-size:14px;
-    min-height:50px;
-}
-
-.price-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    margin:20px 0;
-}
-
-.price-row strong{
-    font-size:17px;
-}
-
-.price-row span{
-    color:#777;
-    font-size:11px;
-    text-align:right;
-}
-
-.ac-content button{
-    width:100%;
-    padding:13px;
-    border:0;
-    border-radius:7px;
-    background:#111;
-    color:#fff;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.ac-content button.details{
-    margin-top:8px;
-    background:#fff;
-    color:#111;
-    border:1px solid #111;
-}
-
-
-/* PROMISE */
-
-.promise{
-    padding:80px 6%;
-    background:#111;
-    color:#fff;
-}
-
-.promise .section-title{
-    text-align:center;
-}
-
-.promise-grid{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.promise-grid div{
-    border:1px solid #333;
-    border-radius:12px;
-    padding:25px;
-}
-
-.promise-grid strong{
+  .service-warranty h2{
     font-size:27px;
-}
+  }
 
-.promise-grid h3{
-    margin:12px 0 7px;
-}
-
-.promise-grid p{
-    color:#aaa;
-    font-size:14px;
-}
-
-
-/* FAQ */
-
-.faq{
-    padding:80px 6%;
-}
-
-.faq-list{
-    max-width:800px;
-    margin:auto;
-}
-
-details{
-    border-bottom:1px solid #ddd;
-    padding:20px 0;
-}
-
-summary{
-    cursor:pointer;
-    font-weight:bold;
-}
-
-details p{
-    color:#666;
-    margin-top:10px;
-}
-
-
-/* MODAL */
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:4000;
-    background:rgba(0,0,0,.7);
-    padding:20px;
-    overflow-y:auto;
-}
-
-.modal.show{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.modal-box{
-    width:100%;
-    max-width:550px;
-    background:#fff;
-    border-radius:17px;
-    padding:35px;
-    position:relative;
-}
-
-.close-modal{
-    position:absolute;
-    right:18px;
-    top:10px;
-    background:none;
-    border:0;
-    font-size:30px;
-    cursor:pointer;
-}
-
-.modal-box>span{
-    font-size:10px;
-    color:#777;
-    letter-spacing:2px;
-    font-weight:bold;
-}
-
-.modal-box h2{
-    margin:8px 0;
-}
-
-.modal-box>p{
-    color:#777;
-    margin-bottom:20px;
-}
-
-.modal-box input,
-.modal-box select,
-.modal-box textarea{
-    width:100%;
-    padding:13px;
-    margin-bottom:13px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:14px;
-}
-
-.modal-box form button{
-    width:100%;
-    padding:15px;
-    border:0;
-    border-radius:8px;
-    background:#111;
-    color:#fff;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-
-/* FOOTER */
-
-footer{
-    background:#050505;
-    color:#fff;
-    padding:55px 7% 20px;
-}
-
-.service-footer{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:60px;
-}
-
-.service-footer>div>strong{
-    font-size:28px;
-}
-
-.service-footer p{
-    color:#aaa;
-    max-width:350px;
-    margin-top:10px;
-}
-
-.service-footer h3{
-    margin-bottom:12px;
-}
-
-.service-footer a,
-.service-footer span{
-    display:block;
-    color:#aaa;
-    font-size:14px;
-    margin:7px 0;
-}
-
-.copyright{
-    max-width:1100px;
-    margin:40px auto 0;
-    padding-top:20px;
-    border-top:1px solid #333;
-    color:#777;
-    font-size:12px;
-}
-
-
-/* FLOATING */
-
-.floating-wa{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:3500;
-    background:#111;
-    color:#fff;
-    padding:13px 20px;
-    border-radius:30px;
-    font-weight:bold;
-}
-
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-    .service-header nav,
-    .service-header-actions{
-        display:none;
-    }
-
-    .service-menu-button{
-        display:block;
-    }
-
-    .service-grid{
-        grid-template-columns:1fr;
-    }
-
-    .promise-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-}
-
-@media(max-width:650px){
-
-    .service-header{
-        height:70px;
-    }
-
-    .service-mobile-menu{
-        top:70px;
-    }
-
-    .service-hero{
-        min-height:500px;
-    }
-
-    .service-hero h1{
-        font-size:38px;
-    }
-
-    .service-hero p{
-        font-size:16px;
-    }
-
-    .hero-actions{
-        flex-direction:column;
-        width:220px;
-    }
-
-    .category-bar a{
-        padding:14px 5px;
-    }
-
-    .category-bar span{
-        font-size:11px;
-    }
-
-    .intro{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .intro h2{
-        font-size:31px;
-    }
-
-    .service-area-section,
-    .repair-area,
-    .installation-area,
-    .promise,
-    .faq{
-        padding:60px 5%;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
-
-    .promise-grid{
-        grid-template-columns:1fr;
-    }
-
-    .modal-box{
-        padding:25px 20px;
-    }
-
-    .service-footer{
-        grid-template-columns:1fr;
-        gap:30px;
-    }
+  .service-modal-box{
+    padding:27px 20px;
+  }
 
 }
