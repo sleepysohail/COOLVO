@@ -1,1115 +1,856 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AC Service & Repair in Pilibhit | COOLVO</title>
 
-<title>AC Service & Repair | COOLVO.IN</title>
+  <meta
+    name="description"
+    content="COOLVO provides AC service, AC repair, AC installation, refrigerator repair, washing machine repair and home appliance services in Pilibhit and nearby areas."
+  >
 
-<meta name="description" content="COOLVO AC service, repair, cleaning, gas checking, installation, uninstallation and copper piping in Pilibhit and nearby areas.">
+  <meta
+    name="keywords"
+    content="AC Service Pilibhit, AC Repair Pilibhit, AC Installation Pilibhit, Best AC Service in Pilibhit, Fridge Repair Pilibhit, Washing Machine Repair Pilibhit"
+  >
 
-<link rel="stylesheet" href="services.css">
+  <link rel="canonical" href="https://coolvo.in/services.html">
 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 
-<!-- HEADER -->
+<header class="site-header">
 
-<header class="service-header">
+  <a href="index.html" class="brand">
+    <img
+      src="assets/coolvo-logo.png"
+      alt="COOLVO - Best AC Service in Pilibhit"
+    >
+  </a>
 
-    <a href="index.html" class="service-logo">
-        <span>❄ COOLVO</span>
-        <small>HOME APPLIANCE SERVICE</small>
+  <nav class="main-nav">
+
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#why">Why Coolvo</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Book Service</a>
+
+  </nav>
+
+  <div class="header-actions">
+
+    <a href="tel:6399843648" class="call-btn">
+      Call
     </a>
 
+    <a
+      href="https://wa.me/916399843648"
+      target="_blank"
+      rel="noopener"
+      class="wa-btn"
+    >
+      WhatsApp
+    </a>
 
-    <nav>
+  </div>
 
-        <a href="index.html">Home</a>
-
-        <a href="services.html" class="active">
-            Services
-        </a>
-
-        <a href="index.html#parts">
-            Spare Parts
-        </a>
-
-        <a href="index.html#gallery">
-            Gallery
-        </a>
-
-        <a href="index.html#contact">
-            Booking
-        </a>
-
-    </nav>
-
-
-    <div class="service-header-actions">
-
-        <a href="tel:6399843648">
-            Call
-        </a>
-
-        <a href="https://wa.me/916399843648"
-           target="_blank">
-            WhatsApp
-        </a>
-
-    </div>
-
-
-    <button class="service-menu-button"
-            onclick="toggleServiceMenu()">
-        ☰
-    </button>
+  <button
+    class="menu-btn"
+    onclick="toggleMobileMenu()"
+    aria-label="Open menu"
+  >
+    ☰
+  </button>
 
 </header>
 
 
-<!-- MOBILE NAV -->
+<!-- ================= MOBILE MENU ================= -->
 
-<div id="serviceMobileMenu" class="service-mobile-menu">
+<div id="mobileMenu" class="mobile-menu">
 
-    <a href="index.html">Home</a>
-
-    <a href="services.html">Services</a>
-
-    <a href="index.html#parts">Spare Parts</a>
-
-    <a href="index.html#gallery">Gallery</a>
-
-    <a href="index.html#contact">Booking</a>
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#why">Why Coolvo</a>
+  <a href="index.html#reviews">Reviews</a>
+  <a href="index.html#contact">Book Service</a>
 
 </div>
 
 
-<!-- HERO -->
-
-<section class="service-hero">
-
-    <div class="service-hero-content">
-
-        <span>COOLVO AC SERVICES</span>
-
-        <h1>
-            AC Service & Repair
-        </h1>
-
-        <p>
-            Professional AC cleaning, repair, cooling diagnosis,
-            gas checking, installation and uninstallation
-            in Pilibhit and nearby areas.
-        </p>
+<main>
 
 
-        <div class="hero-actions">
+<!-- ================= PAGE HERO ================= -->
 
-            <a href="#service"
-               class="hero-main-button">
-                Explore Services
-            </a>
+<section class="services-hero">
 
-            <a href="https://wa.me/916399843648"
-               target="_blank"
-               class="hero-outline-button">
-                WhatsApp Us
-            </a>
+  <div>
 
-        </div>
+    <span>
+      COOLVO SERVICES · PILIBHIT
+    </span>
+
+    <h1>
+      BEST AC SERVICE
+      <br>
+      <em>IN PILIBHIT.</em>
+    </h1>
+
+    <p>
+      AC repair, AC service and AC installation are our
+      primary focus, with refrigerator, washing machine
+      and other home appliance support.
+    </p>
+
+    <div class="services-hero-actions">
+
+      <button
+        class="service-primary-btn"
+        onclick="openServiceBooking('AC Service')"
+      >
+        Book AC Service
+      </button>
+
+      <a
+        href="https://wa.me/916399843648?text=Hello%20Coolvo%2C%20I%20need%20help%20with%20an%20appliance."
+        target="_blank"
+        rel="noopener"
+        class="service-secondary-btn"
+      >
+        WhatsApp Coolvo
+      </a>
 
     </div>
 
-</section>
-
-
-<!-- CATEGORY BAR -->
-
-<section class="category-bar">
-
-    <a href="#service">
-        <strong>❄</strong>
-        <span>AC Service</span>
-    </a>
-
-    <a href="#repair">
-        <strong>🔧</strong>
-        <span>Repair & Gas</span>
-    </a>
-
-    <a href="#installation">
-        <strong>🏠</strong>
-        <span>Installation</span>
-    </a>
+  </div>
 
 </section>
 
 
-<!-- INTRO -->
+<!-- ================= AC SERVICES ================= -->
 
-<section class="intro">
+<section class="services-main" id="service">
+
+  <div class="services-heading">
+
+    <span>
+      01 · AC SPECIALIST
+    </span>
+
+    <h2>
+      AC services
+    </h2>
+
+    <p>
+      Tell us the issue. Coolvo will review the request
+      and confirm the appropriate service.
+    </p>
+
+  </div>
+
+
+  <div class="service-detail-grid">
+
+
+    <article class="service-detail-card featured-service">
+
+      <div class="service-number">
+        01
+      </div>
+
+      <span>
+        MOST REQUESTED
+      </span>
+
+      <h3>
+        AC Service & Cleaning
+      </h3>
+
+      <p>
+        Routine AC servicing, cleaning and maintenance
+        for better appliance performance.
+      </p>
+
+      <ul>
+        <li>General AC service</li>
+        <li>Indoor unit cleaning</li>
+        <li>Performance inspection</li>
+        <li>Maintenance guidance</li>
+      </ul>
+
+      <button
+        onclick="openServiceBooking('AC Service')"
+      >
+        Request AC Service →
+      </button>
+
+    </article>
+
+
+    <article class="service-detail-card">
+
+      <div class="service-number">
+        02
+      </div>
+
+      <span>
+        REPAIR
+      </span>
+
+      <h3>
+        AC Repair
+      </h3>
+
+      <p>
+        For reported cooling, leakage, noise and
+        other common AC problems.
+      </p>
+
+      <ul>
+        <li>Cooling complaints</li>
+        <li>Water leakage</li>
+        <li>Unusual noise</li>
+        <li>Problem inspection</li>
+      </ul>
+
+      <button
+        onclick="openServiceBooking('AC Repair')"
+      >
+        Request AC Repair →
+      </button>
+
+    </article>
+
+
+    <article class="service-detail-card">
+
+      <div class="service-number">
+        03
+      </div>
+
+      <span>
+        INSTALLATION
+      </span>
+
+      <h3>
+        AC Installation
+      </h3>
+
+      <p>
+        Professional installation and related
+        copper-line work for AC setups.
+      </p>
+
+      <ul>
+        <li>Split AC installation</li>
+        <li>Window AC installation</li>
+        <li>Uninstallation</li>
+        <li>Copper-line support</li>
+      </ul>
+
+      <button
+        onclick="openServiceBooking('AC Installation')"
+      >
+        Request Installation →
+      </button>
+
+    </article>
+
+
+    <article class="service-detail-card">
+
+      <div class="service-number">
+        04
+      </div>
+
+      <span>
+        COPPER LINE
+      </span>
+
+      <h3>
+        Underground Copper Line
+      </h3>
+
+      <p>
+        Copper-line requirements for suitable AC
+        installation projects.
+      </p>
+
+      <ul>
+        <li>Site requirement discussion</li>
+        <li>Copper piping</li>
+        <li>Installation support</li>
+        <li>Project inspection</li>
+      </ul>
+
+      <button
+        onclick="openServiceBooking('Underground Copper Line')"
+      >
+        Request Service →
+      </button>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= APPLIANCE SERVICES ================= -->
+
+<section class="appliance-services">
+
+  <div class="services-heading">
+
+    <span>
+      02 · HOME APPLIANCES
+    </span>
+
+    <h2>
+      More appliance support
+    </h2>
+
+    <p>
+      Coolvo also accepts service requests for
+      refrigerators, washing machines and other
+      home appliances.
+    </p>
+
+  </div>
+
+
+  <div class="appliance-grid">
+
+
+    <article>
+
+      <div class="appliance-icon">
+        ▣
+      </div>
+
+      <h3>
+        Refrigerator Repair
+      </h3>
+
+      <p>
+        Cooling and other reported refrigerator
+        problems can be submitted for inspection.
+      </p>
+
+      <button
+        onclick="openServiceBooking('Refrigerator Repair')"
+      >
+        Book Request →
+      </button>
+
+    </article>
+
+
+    <article>
+
+      <div class="appliance-icon">
+        ◫
+      </div>
+
+      <h3>
+        Washing Machine Repair
+      </h3>
+
+      <p>
+        Repair support for common washing machine
+        problems and parts requirements.
+      </p>
+
+      <button
+        onclick="openServiceBooking('Washing Machine Repair')"
+      >
+        Book Request →
+      </button>
+
+    </article>
+
+
+    <article>
+
+      <div class="appliance-icon">
+        +
+      </div>
+
+      <h3>
+        Other Home Appliances
+      </h3>
+
+      <p>
+        Don't see your appliance? Send the details
+        and Coolvo can guide you.
+      </p>
+
+      <button
+        onclick="openServiceBooking('Other Home Appliance')"
+      >
+        Ask Coolvo →
+      </button>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PARTS ================= -->
+
+<section class="service-parts">
+
+  <div class="services-heading">
+
+    <span>
+      03 · PARTS & ACCESSORIES
+    </span>
+
+    <h2>
+      Spare parts & accessories
+    </h2>
+
+    <p>
+      Coolvo also maintains a secondary catalog
+      of appliance parts and accessories.
+    </p>
+
+  </div>
+
+
+  <div class="parts-grid">
+
+    <span>AC Filters</span>
+    <span>AC Perfume</span>
+    <span>AC Stickers</span>
+    <span>Washing Machine Pipe</span>
+    <span>Spin Cap</span>
+    <span>Door Parts</span>
+    <span>Fridge Tray</span>
+    <span>Bottle Tray</span>
+    <span>Other Parts</span>
+
+  </div>
+
+
+  <a
+    href="https://wa.me/916399843648?text=Hello%20Coolvo%2C%20I%20want%20to%20ask%20about%20a%20spare%20part."
+    target="_blank"
+    rel="noopener"
+    class="parts-contact"
+  >
+    Ask about a spare part →
+  </a>
+
+</section>
+
+
+<!-- ================= SERVICE PROCESS ================= -->
+
+<section class="service-process">
+
+  <div class="services-heading">
+
+    <span>
+      04 · SERVICE PROCESS
+    </span>
+
+    <h2>
+      Simple. Direct. Local.
+    </h2>
+
+  </div>
+
+
+  <div class="process-grid">
+
 
     <div>
 
-        <span>AC CARE BY COOLVO</span>
+      <b>01</b>
 
-        <h2>
-            Complete AC solutions
-            under one roof
-        </h2>
+      <h3>
+        Request
+      </h3>
+
+      <p>
+        Submit your appliance and problem details.
+      </p>
 
     </div>
+
+
+    <div>
+
+      <b>02</b>
+
+      <h3>
+        WhatsApp
+      </h3>
+
+      <p>
+        Your request is sent directly to Coolvo.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <b>03</b>
+
+      <h3>
+        Confirmation
+      </h3>
+
+      <p>
+        Requirements and availability are confirmed.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <b>04</b>
+
+      <h3>
+        Service
+      </h3>
+
+      <p>
+        The service visit is arranged accordingly.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= AREAS ================= -->
+
+<section class="service-areas">
+
+  <div>
+
+    <span>
+      SERVICE COVERAGE
+    </span>
+
+    <h2>
+      Pilibhit & nearby areas
+    </h2>
 
     <p>
-        From routine cleaning to cooling problems,
-        gas checking, repair and installation,
-        choose the service you need and send
-        a booking request. Final service requirements
-        and applicable charges are confirmed before work.
+      Service requests are accepted across Pilibhit
+      and selected nearby areas, subject to availability.
     </p>
 
-</section>
+  </div>
 
 
-<!-- AC SERVICE -->
+  <div class="service-area-list">
 
-<section class="service-area-section"
-         id="service">
+    <span>Pilibhit</span>
+    <span>Puranpur</span>
+    <span>Bisalpur</span>
+    <span>Amariya</span>
+    <span>Majhola</span>
+    <span>Shahjahanpur</span>
+    <span>Nearby Areas</span>
 
-    <div class="section-title">
-
-        <span>SERVICE</span>
-
-        <h2>AC Cleaning & Servicing</h2>
-
-        <p>
-            Regular service helps maintain your AC.
-        </p>
-
-    </div>
-
-
-    <div class="service-grid">
-
-
-        <!-- CARD -->
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                AC
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO SERVICE</small>
-
-                <h3>AC Basic Service</h3>
-
-                <p>
-                    Basic AC inspection and servicing
-                    for common cooling and cleanliness issues.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Starting ₹299</strong>
-
-                    <span>
-                        Doorstep
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Basic Service',
-                    'Starting ₹299'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Basic Service',
-                        'Basic AC inspection and servicing for common cooling and cleanliness issues. Final scope is confirmed after inspection.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- CARD -->
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                DEEP
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO SERVICE</small>
-
-                <h3>Deep AC Cleaning</h3>
-
-                <p>
-                    Detailed indoor-unit cleaning
-                    for dust and airflow concerns.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Starting ₹599</strong>
-
-                    <span>
-                        Split / Window
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'Deep AC Cleaning',
-                    'Starting ₹599'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'Deep AC Cleaning',
-                        'Detailed indoor-unit cleaning. Exact cleaning method depends on AC condition and model.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- CARD -->
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                JET
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO SERVICE</small>
-
-                <h3>AC Jet Cleaning</h3>
-
-                <p>
-                    High-pressure cleaning focused
-                    on removing accumulated dirt.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Starting ₹499</strong>
-
-                    <span>
-                        Service Request
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Jet Cleaning',
-                    'Starting ₹499'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Jet Cleaning',
-                        'Jet cleaning applicability depends on the appliance condition.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <!-- CARD -->
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                CARE
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO SERVICE</small>
-
-                <h3>AC Maintenance</h3>
-
-                <p>
-                    General inspection and maintenance
-                    for your AC.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Starting ₹399</strong>
-
-                    <span>
-                        Doorstep
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Maintenance',
-                    'Starting ₹399'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Maintenance',
-                        'General AC inspection and maintenance. Additional repairs are discussed separately.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-    </div>
+  </div>
 
 </section>
 
 
-<!-- REPAIR -->
+<!-- ================= WARRANTY ================= -->
 
-<section class="repair-area"
-         id="repair">
+<section class="service-warranty">
 
-    <div class="section-title">
+  <div class="warranty-badge">
+    30
+    <small>DAYS</small>
+  </div>
 
-        <span>REPAIR & GAS</span>
+  <div>
 
-        <h2>AC Repair & Cooling Problems</h2>
+    <span>
+      COOLVO WARRANTY
+    </span>
 
-        <p>
-            Send a request when your AC is not working properly.
-        </p>
+    <h2>
+      30-day warranty*
+    </h2>
 
-    </div>
+    <p>
+      Current policy: 30 days on appliances and
+      services, subject to applicable conditions
+      and the work performed.
+    </p>
 
-
-    <div class="service-grid">
-
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                FIX
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO REPAIR</small>
-
-                <h3>AC Repair</h3>
-
-                <p>
-                    Diagnosis of cooling, noise,
-                    water leakage and other common issues.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Starting ₹299</strong>
-
-                    <span>
-                        Inspection Based
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Repair',
-                    'Starting ₹299'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Repair',
-                        'The appliance is inspected to identify the problem. Additional repair or replacement is discussed before proceeding.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                GAS
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO SERVICE</small>
-
-                <h3>Gas Checking / Refill</h3>
-
-                <p>
-                    Cooling diagnosis, leakage checking
-                    and gas-related service.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Get Quote</strong>
-
-                    <span>
-                        Inspection
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Gas Checking / Refill',
-                    'Get Quote'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Gas Checking / Refill',
-                        'Gas service should be performed after checking the AC condition and possible leakage.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                PCB
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO REPAIR</small>
-
-                <h3>AC PCB Repair</h3>
-
-                <p>
-                    Diagnosis of control-board related
-                    AC problems.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Get Quote</strong>
-
-                    <span>
-                        Inspection
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC PCB Repair',
-                    'Get Quote'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC PCB Repair',
-                        'PCB-related problems require diagnosis. Repair or replacement depends on the AC model and board condition.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                DROP
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO REPAIR</small>
-
-                <h3>AC Water Leakage</h3>
-
-                <p>
-                    Inspection for indoor water leakage,
-                    drainage and related issues.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Starting ₹299</strong>
-
-                    <span>
-                        Inspection
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Water Leakage',
-                    'Starting ₹299'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Water Leakage',
-                        'Drainage and relevant components are inspected to identify the cause.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-    </div>
+  </div>
 
 </section>
 
 
-<!-- INSTALLATION -->
+<!-- ================= BOOKING MODAL ================= -->
 
-<section class="installation-area"
-         id="installation">
+<div
+  id="serviceBookingModal"
+  class="service-modal"
+  aria-hidden="true"
+>
 
-    <div class="section-title">
+  <div class="service-modal-box">
 
-        <span>INSTALLATION</span>
+    <button
+      class="modal-close"
+      onclick="closeServiceBooking()"
+      aria-label="Close"
+    >
+      ×
+    </button>
 
-        <h2>AC Installation Services</h2>
 
-        <p>
-            Installation and shifting support for split and window ACs.
-        </p>
+    <span>
+      COOLVO SERVICE REQUEST
+    </span>
 
-    </div>
+    <h2>
+      Book a service request
+    </h2>
 
+    <p>
+      Your request will open in WhatsApp.
+      It is not an instant confirmed booking.
+    </p>
 
-    <div class="service-grid">
 
+    <form id="serviceBookingForm">
 
-        <article class="ac-card">
+      <input
+        type="text"
+        id="serviceName"
+        placeholder="Your name"
+        required
+      >
 
-            <div class="ac-image">
-                INSTALL
-            </div>
 
-            <div class="ac-content">
+      <input
+        type="tel"
+        id="servicePhone"
+        placeholder="Mobile number"
+        maxlength="10"
+        required
+      >
 
-                <small>COOLVO INSTALLATION</small>
 
-                <h3>AC Installation</h3>
+      <input
+        type="text"
+        id="serviceArea"
+        placeholder="Area / city"
+        required
+      >
 
-                <p>
-                    Installation support for split
-                    and window AC units.
-                </p>
 
-                <div class="price-row">
+      <select id="selectedService" required>
 
-                    <strong>Starting ₹1,599</strong>
+        <option value="">
+          Select service
+        </option>
 
-                    <span>
-                        Site Requirements
-                    </span>
+        <option>
+          AC Service
+        </option>
 
-                </div>
+        <option>
+          AC Repair
+        </option>
 
-                <button onclick="openServiceBooking(
-                    'AC Installation',
-                    'Starting ₹1,599'
-                )">
-                    Book Request
-                </button>
+        <option>
+          AC Installation
+        </option>
 
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Installation',
-                        'Requirements vary by AC model, location and piping requirements. Final scope and charges are confirmed before work.'
-                        )">
-                    View Details
-                </button>
+        <option>
+          Underground Copper Line
+        </option>
 
-            </div>
+        <option>
+          Refrigerator Repair
+        </option>
 
-        </article>
+        <option>
+          Washing Machine Repair
+        </option>
 
+        <option>
+          Other Home Appliance
+        </option>
 
-        <article class="ac-card">
+      </select>
 
-            <div class="ac-image">
-                REMOVE
-            </div>
 
-            <div class="ac-content">
+      <textarea
+        id="serviceProblem"
+        rows="4"
+        placeholder="Describe the problem"
+      ></textarea>
 
-                <small>COOLVO SERVICE</small>
 
-                <h3>AC Uninstallation</h3>
+      <button type="submit">
+        Send Request on WhatsApp →
+      </button>
 
-                <p>
-                    Removal of split or window AC
-                    for shifting or replacement.
-                </p>
+    </form>
 
-                <div class="price-row">
-
-                    <strong>Starting ₹699</strong>
-
-                    <span>
-                        Site Requirements
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Uninstallation',
-                    'Starting ₹699'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Uninstallation',
-                        'AC removal service for shifting, replacement or other requirements.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-
-        <article class="ac-card">
-
-            <div class="ac-image">
-                PIPE
-            </div>
-
-            <div class="ac-content">
-
-                <small>COOLVO INSTALLATION</small>
-
-                <h3>Copper Piping</h3>
-
-                <p>
-                    Copper piping and related
-                    AC installation requirements.
-                </p>
-
-                <div class="price-row">
-
-                    <strong>Get Quote</strong>
-
-                    <span>
-                        Measurement
-                    </span>
-
-                </div>
-
-                <button onclick="openServiceBooking(
-                    'AC Copper Piping',
-                    'Get Quote'
-                )">
-                    Book Request
-                </button>
-
-                <button class="details"
-                        onclick="showServiceDetails(
-                        'AC Copper Piping',
-                        'Piping requirements depend on distance, AC model and installation conditions. Measurement is required.'
-                        )">
-                    View Details
-                </button>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- PROMISE -->
-
-<section class="promise">
-
-    <div class="section-title">
-
-        <span>COOLVO PROMISE</span>
-
-        <h2>Simple. Local. Transparent.</h2>
-
-    </div>
-
-
-    <div class="promise-grid">
-
-        <div>
-            <strong>01</strong>
-            <h3>Doorstep Service</h3>
-            <p>
-                Service requests in Pilibhit and nearby areas.
-            </p>
-        </div>
-
-        <div>
-            <strong>02</strong>
-            <h3>Booking Request</h3>
-            <p>
-                No online payment required.
-            </p>
-        </div>
-
-        <div>
-            <strong>03</strong>
-            <h3>Warranty</h3>
-            <p>
-                PCB 10 days, Motor 15 days,
-                Gas 30 days according to applicable conditions.
-            </p>
-        </div>
-
-        <div>
-            <strong>04</strong>
-            <h3>Local Support</h3>
-            <p>
-                Local support from Sohail Ali and the Coolvo team.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FAQ -->
-
-<section class="faq">
-
-    <div class="section-title">
-
-        <span>FAQ</span>
-
-        <h2>Frequently Asked Questions</h2>
-
-    </div>
-
-
-    <div class="faq-list">
-
-        <details>
-
-            <summary>
-                Do I need to pay online to book?
-            </summary>
-
-            <p>
-                No. Coolvo currently accepts booking requests.
-                The team can contact you to confirm the requirements.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                What areas does Coolvo serve?
-            </summary>
-
-            <p>
-                Pilibhit, Puranpur, Bisalpur, Amariya,
-                Majhola and nearby areas, subject to availability.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                What are Coolvo working hours?
-            </summary>
-
-            <p>
-                9:00 AM to 10:00 PM. Friday is the weekly off.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                Is gas refill always required if cooling is low?
-            </summary>
-
-            <p>
-                Not necessarily. Cooling problems can have different causes.
-                Inspection should be done before deciding the required work.
-            </p>
-
-        </details>
-
-
-        <details>
-
-            <summary>
-                What warranty does Coolvo provide?
-            </summary>
-
-            <p>
-                Current warranty policy:
-                PCB 10 days, Motor 15 days and Gas 30 days,
-                subject to applicable conditions.
-            </p>
-
-        </details>
-
-    </div>
-
-</section>
-
-
-<!-- BOOKING MODAL -->
-
-<div id="bookingModal"
-     class="modal">
-
-    <div class="modal-box">
-
-        <button class="close-modal"
-                onclick="closeServiceBooking()">
-            ×
-        </button>
-
-        <span>
-            COOLVO BOOKING REQUEST
-        </span>
-
-        <h2 id="selectedService">
-            Service Request
-        </h2>
-
-        <p id="selectedPrice">
-            Get Quote
-        </p>
-
-
-        <form id="serviceBookingForm">
-
-            <input
-                type="text"
-                id="customerName"
-                placeholder="Your Name"
-                required
-            >
-
-            <input
-                type="tel"
-                id="customerPhone"
-                placeholder="Mobile Number"
-                required
-            >
-
-            <input
-                type="text"
-                id="customerLocation"
-                placeholder="Area / City"
-                required
-            >
-
-
-            <select id="acType" required>
-
-                <option value="">
-                    AC Type
-                </option>
-
-                <option>
-                    Split AC
-                </option>
-
-                <option>
-                    Window AC
-                </option>
-
-                <option>
-                    Not Sure
-                </option>
-
-            </select>
-
-
-            <select id="preferredTime">
-
-                <option value="">
-                    Preferred Time
-                </option>
-
-                <option>
-                    9 AM – 12 PM
-                </option>
-
-                <option>
-                    12 PM – 3 PM
-                </option>
-
-                <option>
-                    3 PM – 6 PM
-                </option>
-
-                <option>
-                    6 PM – 10 PM
-                </option>
-
-            </select>
-
-
-            <textarea
-                id="customerProblem"
-                rows="4"
-                placeholder="Describe the problem">
-            </textarea>
-
-
-            <button type="submit">
-                Send Request on WhatsApp
-            </button>
-
-        </form>
-
-    </div>
+  </div>
 
 </div>
 
 
-<!-- FOOTER -->
+</main>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <div class="service-footer">
+  <div class="footer-grid">
 
-        <div>
+    <div>
 
-            <strong>❄ COOLVO</strong>
+      <div class="footer-brand">
+        coolvo.in
+      </div>
 
-            <p>
-                Home Appliance Service in Pilibhit
-                and nearby areas.
-            </p>
+      <p>
+        Best AC Service in Pilibhit.
+        AC, fridge, washing machine and
+        home appliance service.
+      </p>
 
-        </div>
-
-
-        <div>
-
-            <h3>Services</h3>
-
-            <a href="#service">
-                AC Service
-            </a>
-
-            <a href="#repair">
-                AC Repair
-            </a>
-
-            <a href="#installation">
-                AC Installation
-            </a>
-
-            <a href="index.html#parts">
-                Spare Parts
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h3>Contact</h3>
-
-            <a href="tel:6399843648">
-                6399843648
-            </a>
-
-            <a href="mailto:alisohilali@gmail.com">
-                alisohilali@gmail.com
-            </a>
-
-            <span>
-                9 AM – 10 PM
-            </span>
-
-            <span>
-                Friday Off
-            </span>
-
-        </div>
+      <small>
+        Owner / Head Technician: Sohail Ali
+      </small>
 
     </div>
 
 
-    <div class="copyright">
-        © 2026 COOLVO.IN · All Rights Reserved.
+    <div>
+
+      <h3>
+        Services
+      </h3>
+
+      <a href="#service">
+        AC Service
+      </a>
+
+      <a href="#service">
+        AC Repair
+      </a>
+
+      <a href="#service">
+        AC Installation
+      </a>
+
+      <a href="#service">
+        Copper Line
+      </a>
+
     </div>
+
+
+    <div>
+
+      <h3>
+        Contact
+      </h3>
+
+      <a href="tel:6399843648">
+        6399843648
+      </a>
+
+      <a href="mailto:alisohilali@gmail.com">
+        alisohilali@gmail.com
+      </a>
+
+      <span>
+        Instagram: @coolvo.in
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © 2026 COOLVO.IN · All Rights Reserved.
+
+    <span>
+      *Warranty subject to applicable conditions.
+    </span>
+
+  </div>
 
 </footer>
 
 
-<a href="https://wa.me/916399843648"
-   target="_blank"
-   class="floating-wa">
+<!-- ================= FLOATING SUPPORT ================= -->
+
+<button
+  class="support-fab"
+  onclick="window.location.href='index.html#contact'"
+>
+
+  <span>✦</span>
+
+  <b>COOLVO SUPPORT</b>
+
+  <small>Book service</small>
+
+</button>
+
+
+<!-- ================= MOBILE CTA ================= -->
+
+<div class="mobile-cta">
+
+  <a href="tel:6399843648">
+    Call
+  </a>
+
+  <a href="index.html#contact">
+    Book
+  </a>
+
+  <a
+    href="https://wa.me/916399843648"
+    target="_blank"
+    rel="noopener"
+  >
     WhatsApp
-</a>
+  </a>
+
+</div>
 
 
+<script src="script.js"></script>
 <script src="services.js"></script>
 
 </body>
