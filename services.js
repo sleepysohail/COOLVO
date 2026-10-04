@@ -1,273 +1,157 @@
-/* =====================================
-   COOLVO SERVICES PAGE JAVASCRIPT
-===================================== */
+/* =========================================
+   COOLVO SERVICES PAGE
+   Service Booking Modal + WhatsApp
+   ========================================= */
 
+const COOLVO_WHATSAPP = "916399843648";
 
-/* MOBILE MENU */
+/* ---------- OPEN BOOKING MODAL ---------- */
 
-function toggleServiceMenu(){
+function openServiceBooking(serviceName = "") {
+  const modal = document.getElementById("serviceBookingModal");
+  const serviceSelect = document.getElementById("selectedService");
 
-    const menu =
-        document.getElementById("serviceMobileMenu");
+  if (!modal) return;
 
-    if(menu){
-        menu.classList.toggle("show");
-    }
+  if (serviceSelect && serviceName) {
+    serviceSelect.value = serviceName;
+  }
 
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden", "false");
+
+  document.body.style.overflow = "hidden";
+
+  const nameInput = document.getElementById("serviceName");
+
+  if (nameInput) {
+    setTimeout(() => {
+      nameInput.focus();
+    }, 150);
+  }
 }
 
 
-/* CLOSE MOBILE MENU */
+/* ---------- CLOSE BOOKING MODAL ---------- */
 
-document.querySelectorAll(
-    ".service-mobile-menu a"
-).forEach(link => {
+function closeServiceBooking() {
+  const modal = document.getElementById("serviceBookingModal");
 
-    link.addEventListener("click", () => {
+  if (!modal) return;
 
-        const menu =
-            document.getElementById("serviceMobileMenu");
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden", "true");
 
-        if(menu){
-            menu.classList.remove("show");
-        }
+  document.body.style.overflow = "";
+}
 
-    });
 
+/* ---------- FORM SUBMISSION ---------- */
+
+const serviceForm = document.getElementById("serviceBookingForm");
+
+if (serviceForm) {
+  serviceForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("serviceName")?.value.trim() || "";
+    const phone = document.getElementById("servicePhone")?.value.trim() || "";
+    const service =
+      document.getElementById("selectedService")?.value.trim() || "";
+
+    const address =
+      document.getElementById("serviceAddress")?.value.trim() || "";
+
+    const problem =
+      document.getElementById("serviceProblem")?.value.trim() || "";
+
+    if (!name) {
+      alert("Please enter your name.");
+      return;
+    }
+
+    if (!/^[6-9]\d{9}$/.test(phone)) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    if (!service) {
+      alert("Please select a service.");
+      return;
+    }
+
+    if (!address) {
+      alert("Please enter your address.");
+      return;
+    }
+
+    const message =
+`*COOLVO SERVICE REQUEST*
+
+Name: ${name}
+Mobile: ${phone}
+Service: ${service}
+
+Address:
+${address}
+
+Problem / Requirement:
+${problem || "Not specified"}
+
+Please confirm service availability and visit details.
+
+Website: coolvo.in`;
+
+    const whatsappURL =
+      `https://wa.me/${COOLVO_WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+    serviceForm.reset();
+
+    closeServiceBooking();
+  });
+}
+
+
+/* ---------- PHONE NUMBER VALIDATION ---------- */
+
+const servicePhone = document.getElementById("servicePhone");
+
+if (servicePhone) {
+  servicePhone.addEventListener("input", function () {
+    this.value = this.value.replace(/\D/g, "").slice(0, 10);
+  });
+}
+
+
+/* ---------- CLOSE WHEN CLICKING OUTSIDE ---------- */
+
+const serviceModal = document.getElementById("serviceBookingModal");
+
+if (serviceModal) {
+  serviceModal.addEventListener("click", function (event) {
+    if (event.target === serviceModal) {
+      closeServiceBooking();
+    }
+  });
+}
+
+
+/* ---------- ESC KEY ---------- */
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeServiceBooking();
+  }
 });
 
 
-/* CURRENT SERVICE */
-
-let currentService = "AC Service";
-
-let currentPrice = "Get Quote";
-
-
-/* OPEN BOOKING */
-
-function openServiceBooking(service, price){
-
-    currentService = service;
-
-    currentPrice = price;
-
-
-    const modal =
-        document.getElementById("bookingModal");
-
-    const serviceName =
-        document.getElementById("selectedService");
-
-    const priceText =
-        document.getElementById("selectedPrice");
-
-
-    if(modal){
-        modal.classList.add("show");
-    }
-
-    if(serviceName){
-        serviceName.textContent = service;
-    }
-
-    if(priceText){
-        priceText.textContent = price;
-    }
-
-}
-
-
-/* CLOSE BOOKING */
-
-function closeServiceBooking(){
-
-    const modal =
-        document.getElementById("bookingModal");
-
-    if(modal){
-        modal.classList.remove("show");
-    }
-
-}
-
-
-/* CLOSE WHEN CLICKING BACKDROP */
-
-const bookingModal =
-    document.getElementById("bookingModal");
-
-if(bookingModal){
-
-    bookingModal.addEventListener(
-        "click",
-        function(event){
-
-            if(event.target === bookingModal){
-                closeServiceBooking();
-            }
-
-        }
-    );
-
-}
-
-
-/* ESCAPE KEY */
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(event.key === "Escape"){
-            closeServiceBooking();
-        }
-
-    }
-);
-
-
-/* DETAILS */
-
-function showServiceDetails(title, description){
-
-    alert(
-        title +
-        "\n\n" +
-        description +
-        "\n\n" +
-        "For booking, select Book Request."
-    );
-
-}
-
-
-/* BOOKING FORM */
-
-const serviceBookingForm =
-    document.getElementById(
-        "serviceBookingForm"
-    );
-
-
-if(serviceBookingForm){
-
-    serviceBookingForm.addEventListener(
-        "submit",
-        function(event){
-
-            event.preventDefault();
-
-
-            const name =
-                document
-                .getElementById("customerName")
-                .value
-                .trim();
-
-
-            const phone =
-                document
-                .getElementById("customerPhone")
-                .value
-                .trim();
-
-
-            const location =
-                document
-                .getElementById("customerLocation")
-                .value
-                .trim();
-
-
-            const acType =
-                document
-                .getElementById("acType")
-                .value;
-
-
-            const preferredTime =
-                document
-                .getElementById("preferredTime")
-                .value;
-
-
-            const problem =
-                document
-                .getElementById("customerProblem")
-                .value
-                .trim();
-
-
-            if(
-                !name ||
-                !phone ||
-                !location ||
-                !acType
-            ){
-
-                alert(
-                    "Please fill all required details."
-                );
-
-                return;
-
-            }
-
-
-            const message =
-`*NEW COOLVO AC BOOKING REQUEST*
-
-Service:
-${currentService}
-
-Price:
-${currentPrice}
-
-Customer:
-${name}
-
-Phone:
-${phone}
-
-Location:
-${location}
-
-AC Type:
-${acType}
-
-Preferred Time:
-${preferredTime || "Not specified"}
-
-Problem:
-${problem || "Not specified"}
-
-━━━━━━━━━━━━━━━━
-
-COOLVO.IN
-Home Appliance Service
-
-Working Hours:
-9 AM – 10 PM
-Friday Off`;
-
-
-            const whatsappURL =
-                "https://wa.me/916399843648?text=" +
-                encodeURIComponent(message);
-
-
-            window.open(
-                whatsappURL,
-                "_blank"
-            );
-
-
-            serviceBookingForm.reset();
-
-            closeServiceBooking();
-
-        }
-    );
-
-}
+/* ---------- SERVICE CARD BUTTON SUPPORT ---------- */
+
+document.querySelectorAll("[data-service-book]").forEach((button) => {
+  button.addEventListener("click", function () {
+    const serviceName = this.getAttribute("data-service-book") || "";
+    openServiceBooking(serviceName);
+  });
+});
