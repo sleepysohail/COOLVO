@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-IN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Coolvo</title><meta name="robots" content="noindex">
+<title>Coolvo</title><meta name="robots" content="noindex"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#17120f"><link rel="apple-touch-icon" href="/icon-192.png">
 <style>
 :root{--bg:#f6f3ef;--card:#fff;--ink:#1d1814;--mut:#6f655c;--line:#e3dcd4;--ac:#e8541e;--acink:#fff;--ok:#1d7a46;--warn:#a65b00;--bad:#b3261e;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17120f;--card:#231b16;--ink:#f3ece5;--mut:#a89c91;--line:#3a2f27;--ok:#4cc582;--warn:#f0a53c;--bad:#ff8a80;color-scheme:dark}}
@@ -348,4 +348,4 @@ async function init(){
   if((ev==="SIGNED_IN"&&!had)||ev==="SIGNED_OUT"){after().then(render).catch(function(){render()})}});
 }
 init();
-</script></body></html>
+</script><script>if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js",{scope:"/app.html"}).catch(function(){});</script></body></html>
